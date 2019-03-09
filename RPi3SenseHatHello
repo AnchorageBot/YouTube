@@ -23,4 +23,4 @@ sense.show_message("Hello World", scroll_speed=0.05, text_colour=red)
 sense.show_message("Hello World", scroll_speed=0.04, text_colour=blue, back_colour=yellow)
 
 While True:
-    sense.show_message("Hello World", scroll_speed=0.03, text_colour=blue)
+    sense.show_message("Hello World", scroll_speed=0.03, text_colour=green)
