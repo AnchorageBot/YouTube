@@ -1,0 +1,250 @@
+/***
+  Sample air temperature, air humdity, soil moisture, light intensity, and real time clock data every 6 seconds and send results to serial monitor using Arduino 1.8.10
+
+  Materials Schedule
+   (1 each) Adafruit Feather 32u4 Bluefruit LE with stacking headers
+     https://learn.adafruit.com/adafruit-feather-32u4-bluefruit-le?view=all#overview
+   (1 each) Adafruit Adalogger Feather Wing
+     https://www.adafruit.com/product/2922
+   (1 each) DHT22 AM2302 Temperature and Humidity Sensor
+     https://www.adafruit.com/product/393
+   (1 each) DF Robot SEN0193 Capacitive Soil Moisture Sensor
+    https://www.dfrobot.com/product-1385.html   
+   (1 each) DF Robot PT550 Analog Ambient Light Sensor
+    https://www.dfrobot.com/product-1004.html
+   (1 each) Sparkfun Cerberus USB Cable
+     https://www.sparkfun.com/products/12016 
+   (1 each) A to Micro-B USB Cable
+     https://www.adafruit.com/product/592   
+   (9 each) 28AWG male/male jumper wires 
+     https://www.adafruit.com/product/266
+   (1 each) 20 ohm Resistor
+     https://www.mouser.com/Passive-Components/Resistors/_/N-5g9n?P=1z0x8bg  
+   (1 each) Half-size breadboard
+     https://www.adafruit.com/product/64      
+       
+  Assembly
+   1.Update Arduino software
+     a.Arduino->Preferences->Additional Boards URL->https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
+     b.Tools->Boards Manager->Contributed->Adafruit AVR Boards
+     c.Tools->Board->Adafruit Feather 32u4
+     d.Tools->Port->/dev/cu.usbmodem1D11201 (Adafruit Feather 32u4)
+     e.Sketch->Include Library->Manage Libraries->Adafruit Unified Sensor Library
+     f.Sketch->Include Library->Manage Libraries->Adafruit AM2320 Sensor Library
+     g.Sketch->Include Library->Manage Libraries->DHT Sensor Library
+   2.Connect temp & humidty sensor to Feather with (3) male/male wires and (1) ten ohm resistor
+     a.Sensor (Out) Feather pin 9 (D)
+     b.Sensor (+)   Feather (VCC) Voltage
+     c.Sensor (-)   Feather (GND) Ground
+     d.Resistor
+   3.Connect soil humidty sensor to Feather with (3) male/male wires
+     a.Sensor (Out) Feather pin 0 (A)
+     b.Sensor (+)   Feather (VCC) Voltage
+     c.Sensor (-)   Feather (GND) Ground     
+   4.Connect light sensor to Feather with (3) male/male wires
+     a.Sensor (Out) Feather pin 1 (A)
+     b.Sensor (+)   Feather (VCC) Voltage
+     c.Sensor (-)   Feather (GND) Ground      
+   5.Connect adalogger feather wing by stacking
+     a.Run PCF 8523 tutorial and install battery with only the feather and the adalogger if not already done
+   6.Attach Cerberus USB Cable to Feather and Laptop
+   7.Verify/compile & upload program to Feather
+     a.Sketch->Verify/Compile
+     b.Sketch->Upload  
+     
+  Engineering
+   Adafruit - Adalogger Feather Wing
+     https://learn.adafruit.com/adafruit-adalogger-featherwing/overview
+   Adafruit - DHT22 sensor
+     https://learn.adafruit.com/adafruit-io-basics-temperature-and-humidity?view=all
+   DFrobot - SEN0193 sensor
+     created 2015-10
+   DFrobot - PT550 sensor    
+   ATS
+     modified December 2019
+  
+***/
+
+// === Libraries ================================
+
+#include <Adafruit_Sensor.h>
+#include <DHT_U.h> 
+#include <DHT.h>; // Call DHT22 Library
+#include "RTClib.h" // Call PCF 8523 RTC Library
+
+// === Gobal constants and variables ============
+
+// Sensor Constants and Pins
+#define DHTPIN 9       // DHT-22 sensor & Feather Pin 9
+#define DHTTYPE DHT22   // DHT 22 sensor type is AM2302
+
+const int AirValue = 520;   // Adjust max AirValue as neccessary
+const int WaterValue = 260;  // Adjust min WaterValue as neccessary
+int intervals = (AirValue - WaterValue)/3;   
+int soilMoistureValue = 0; // Feather Analog pin 0
+
+// Sensor Variables
+float hum;    // Stores humidity value in percent
+float temp;   // Stores temperature value in Celcius
+float tempF;  // Stores temperature value in Fahrenheit
+
+String dry = "Plant needs water, soil sensor value is: "; // dry range is from 430 to 520
+String happy = "Plant has enough water, soil sensor value is: "; // happy range is from 350 to 430,
+String soaked = "Plant has too much water, soil sensor value is: "; // soaked range is from 260 to 350,
+
+float val;  // Stores light values using an illumination range : 1 Lux to 6000 Lux
+
+RTC_PCF8523 rtc;
+
+char daysOfTheWeek[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+
+int sensorTime = 6000; // 6,000 = 6 seconds, 60,000 = 60 seconds
+
+DHT dht(DHTPIN, DHTTYPE); // Initialize DHT sensor
+
+//=== Setup code here, runs once ================
+
+void setup() 
+{
+
+  while (!Serial) {
+    delay(1);  // for Leonardo/Micro/Zero
+  }
+  
+  // Setup the serial monitor for data analysis & debugging
+  Serial.begin (57600);
+  if (! rtc.begin()) {
+    Serial.println("Couldn't find RTC");
+    while (1);
+  }
+
+ if (! rtc.initialized()) {
+    Serial.println("RTC is NOT running!");
+    // following line sets the RTC to the date & time this sketch was compiled
+     rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+    // This line sets the RTC with an explicit date & time, for example to set
+    // January 21, 2014 at 3am you would call:
+    // rtc.adjust(DateTime(2014, 1, 21, 3, 0, 0));
+  }  
+  
+  dht.begin();    // Start the DHT sensor
+}
+
+//=== Main code here, runs/loops repeatedly=====
+
+void loop()
+{
+  dht22();
+  sen0193();
+  pt550();
+  pcf8523();
+}
+
+//===Sensor functions ===========================
+
+void dht22() // dht22 air temp & humidity sensor
+{
+  delay(sensorTime);  // Delay to stabilize DHT-22 sensor, optimize data output, minimize energy use 
+   
+    hum = dht.readHumidity();  // Get Humidity value
+    temp= dht.readTemperature();  // Get Temperature value
+    tempF= (temp*(1.8))+32;
+    
+  // Send results to Serial Monitor
+  
+    Serial.print("Air Humidity: ");
+    Serial.print(hum);
+    Serial.print(" %, Air Temp: ");
+    Serial.print(temp);
+    Serial.print(" °C, ");
+    Serial.print(tempF);
+    Serial.println(" °F");
+  
+  Serial.println(" ");                     
+}
+
+void sen0193() // soil moisture sensor
+{
+
+  // operate soil moisture sensor 
+ soilMoistureValue = analogRead(A0);
+ 
+ // report soil moisture sensor values 
+ String drySensor = dry + soilMoistureValue;
+ String happySensor = happy + soilMoistureValue;
+ String soakedSensor = soaked + soilMoistureValue;
+ 
+ if(soilMoistureValue > WaterValue && soilMoistureValue < (WaterValue + intervals))
+ {
+   Serial.println(soakedSensor);
+ }
+ 
+ else if(soilMoistureValue > (WaterValue + intervals) && soilMoistureValue < (AirValue - intervals))
+ {
+   Serial.println(happySensor);
+ }
+ 
+ else if(soilMoistureValue < AirValue && soilMoistureValue > (AirValue - intervals))
+ {
+   Serial.println(drySensor);
+ }
+
+ Serial.println(" "); 
+ delay(sensorTime);
+}
+
+void pt550()
+{
+      int val;
+      val=analogRead(1);   //connect grayscale sensor to analog pin 1
+      Serial.print("Light intensity in Lux: ");
+      Serial.println(val,DEC);//print the value to serial
+      Serial.println(" ");       
+      delay(sensorTime);
+}
+
+void pcf8523() 
+{
+    DateTime now = rtc.now();
+
+    Serial.print(now.year(), DEC);
+    Serial.print('/');
+    Serial.print(now.month(), DEC);
+    Serial.print('/');
+    Serial.print(now.day(), DEC);
+    Serial.print(" (");
+    Serial.print(daysOfTheWeek[now.dayOfTheWeek()]);
+    Serial.print(") ");
+    Serial.print(now.hour(), DEC);
+    Serial.print(':');
+    Serial.print(now.minute(), DEC);
+    Serial.print(':');
+    Serial.print(now.second(), DEC);
+    Serial.println();
+
+    Serial.print(" since midnight 1/1/1970 = ");
+    Serial.print(now.unixtime());
+    Serial.print("s = ");
+    Serial.print(now.unixtime() / 86400L);
+    Serial.println("d");
+
+    // calculate a date which is 7 days, 12 hours and 30 seconds into the future
+    DateTime future (now + TimeSpan(7,12,30,6));
+
+    Serial.print(" now + 7d + 12h + 30m + 6s: ");
+    Serial.print(future.year(), DEC);
+    Serial.print('/');
+    Serial.print(future.month(), DEC);
+    Serial.print('/');
+    Serial.print(future.day(), DEC);
+    Serial.print(' ');
+    Serial.print(future.hour(), DEC);
+    Serial.print(':');
+    Serial.print(future.minute(), DEC);
+    Serial.print(':');
+    Serial.print(future.second(), DEC);
+    Serial.println();
+
+    Serial.println();
+    delay(sensorTime);
+}
