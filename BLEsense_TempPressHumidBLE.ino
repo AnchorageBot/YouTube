@@ -1,7 +1,7 @@
-*
+/*
  
   This script will use a Arduino Nano 33 BLE to share air temp, humidity, & pressure sensor data
-  via BLE radio (functions as a BLE peripheral) or via serial cable
+  via BLE radio (functions as a BLE peripheral) or via serial cable/termial
 
   Materials Schedule  
     Arduino Nano 33 BLE
@@ -149,36 +149,19 @@ void loop() {
 
   delay(sensorTime);                                          // sensor calibration & output delay
 
-  //hts221();                                                 // uncomment for laptop use   
-  float temperature = HTS.readTemperature();                  // read HTS221 temp & humidty sensor for BLE
-  float humidity    = HTS.readHumidity();
-  float tempF = (temperature*(1.8))+32;
-  tempCharacteristic.writeValue(temperature);                 // advertise temperature (2A6E) via BLE
-  humidCharacteristic.writeValue(humidity);                   // advertise humidity (2A6F) via BLE 
-  
-  // https://www.arduino.cc/en/Reference/ArduinoBLEBLECharacteristicwriteValue
-  // https://www.arduino.cc/en/Reference/ArduinoBLEBLECharacteristicreadValue    
-  // https://www.arduino.cc/en/Reference/ArduinoBLEBLEDescriptorread                  
+  hts221serial();                                             // temp & humidity data via serial
+  lps22HBserial();                                            // pressure data via serial
+  //CentralSerial();                                          // BLE Central status via serial
 
-  lps22HB();                                                 // uncomment for laptop use
-  //float pressure = BARO.readPressure();                     // read LPS22HB pressure sensor for BLE
-  //float psi = pressure/6.895;
-  //float hg = pressure/3.386;
-  //pressCharacteristic.writeValue(pressure);                 // Advertise pressure (2A6D) via BLE    
-
-  //bleSerial();                                            // uncomment for laptop use
-  BLEDevice central = BLE.central();                          // Wait for a BLE central to connect
-  if (central) {                                              // if central connects
-     digitalWrite(LED_BUILTIN, HIGH);                         // turn on the LED   
-     while (central.connected()){}                            // keep looping while connected  
-     digitalWrite(LED_BUILTIN, LOW);                          // when the central disconnects, turn off the LED                
-  }
+  hts221ble();                                                // temp & humidity data via BLE radio
+  lps22HBble();                                               // pressure data via BLE radio
+  CentralBLE();                                               // BLE Central connection
 
 }
 
-//===Sensor functions ===========================
+//===Serial functions ===========================
 
-void hts221() {                                               // print HTS221 temp & humidty data via serial terminal
+void hts221serial() {                                         // print HTS221 temp & humidty data via serial terminal
   float temperature = HTS.readTemperature();                  // read HTS221 temp & humidty sensor
   float humidity    = HTS.readHumidity();
   float tempF = (temperature*(1.8))+32;
@@ -194,7 +177,8 @@ void hts221() {                                               // print HTS221 te
   Serial.println(); 
 }
 
-void lps22HB() {                                              // print LPS22HB pressure data via serial terminal
+
+void lps22HBserial() {                                        // print LPS22HB pressure data via serial terminal
   float pressure = BARO.readPressure();                       // read LPS22HB pressure sensor 
   float psi = pressure/6.895;
   float hg = pressure/3.386;
@@ -208,10 +192,8 @@ void lps22HB() {                                              // print LPS22HB p
   Serial.println();   
 }  
 
-//===BLE functions ==============================
-
-void bleSerial() {
-    BLEDevice central = BLE.central();                       // Wait for BLE central to connect
+void CentralSerial() {
+    BLEDevice central = BLE.central();                       // Wait for a BLE central to connect
     if (central) {                                           // if central connects
     Serial.print("Connected to central MAC: ");
     Serial.println(central.address());                       // print central's address via serial terminal
@@ -223,5 +205,35 @@ void bleSerial() {
     Serial.print("Disconnected from central MAC: ");
     Serial.println(central.address());
     Serial.println();     
+  }
+}
+
+//===BLE functions ==============================
+
+void hts221ble() {                                            // HTS221 temp & humidty data via BLE radio
+  float temperature = HTS.readTemperature();                  // read HTS221 temp & humidty sensor 
+  float humidity    = HTS.readHumidity();
+  float tempF = (temperature*(1.8))+32;
+  tempCharacteristic.writeValue(temperature);                 // advertise temperature (2A6E) via BLE
+  humidCharacteristic.writeValue(humidity);                   // advertise humidity (2A6F) via BLE 
+  
+  // https://www.arduino.cc/en/Reference/ArduinoBLEBLECharacteristicwriteValue
+  // https://www.arduino.cc/en/Reference/ArduinoBLEBLECharacteristicreadValue    
+  // https://www.arduino.cc/en/Reference/ArduinoBLEBLEDescriptorread 
+}
+
+void lps22HBble() {                                           // LPS22HB pressure data via BLE radio
+    float pressure = BARO.readPressure();                     // read LPS22HB pressure sensor
+    float psi = pressure/6.895;
+    float hg = pressure/3.386;
+    pressCharacteristic.writeValue(pressure);                 // advertise pressure (2A6D) via BLE 
+}
+
+void CentralBLE() {
+  BLEDevice central = BLE.central();                          // Wait for a BLE central to connect
+  if (central) {                                              // if central connects
+     digitalWrite(LED_BUILTIN, HIGH);                         // turn on the LED   
+     while (central.connected()){}                            // keep looping while connected  
+     digitalWrite(LED_BUILTIN, LOW);                          // when the central disconnects, turn off the LED                
   }
 }
