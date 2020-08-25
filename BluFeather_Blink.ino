@@ -19,11 +19,15 @@
      b.Sketch->Upload  
      
   Engineering
-   http://www.arduino.cc/en/Tutorial/Blink
-   modified 8 May 2014 by Scott Fitzgerald
-   modified 2 Sep 2016 by Arturo Guadalupi
-   modified 8 Sep 2016 by Colby Newman
-   modified August 2019 by ats
+   Arduino  
+     http://www.arduino.cc/en/Tutorial/Blink
+     modified 8 May 2014 by Scott Fitzgerald
+     modified 2 Sep 2016 by Arturo Guadalupi
+     modified 8 Sep 2016 by Colby Newman
+   ATS
+     https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
+     https://github.com/AnchorageBot
+     modified August 2019
   
 ***/
 
