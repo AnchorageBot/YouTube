@@ -35,7 +35,7 @@
  *   
  *   Engineering 
  *     Development by Adafruit & DFrobot
- *     Modified by ATS
+ *     ATS
  *       https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
  *       https://github.com/AnchorageBot
  *   
