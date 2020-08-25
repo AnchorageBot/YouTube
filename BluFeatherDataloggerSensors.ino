@@ -1,5 +1,6 @@
 /***
-  Sample air temperature, air humdity, soil moisture, light intensity, and real time clock data every 6 seconds and send results to serial monitor using Arduino 1.8.10
+  Sample air temperature, air humdity, soil moisture, light intensity, and real time clock data every 6 seconds
+  and send results to serial monitor using Arduino 1.8.10
 
   Materials Schedule
    (1 each) Adafruit Feather 32u4 Bluefruit LE with stacking headers
@@ -61,6 +62,7 @@
      created 2015-10
    DFrobot - PT550 sensor    
    ATS
+     https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg?view_as=subscriber
      modified December 2019
   
 ***/
