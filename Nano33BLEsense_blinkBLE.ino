@@ -29,6 +29,8 @@
    Arduino 
      File->Examples->ArduinoBLE->Peripheral->LED
    Modified
+     https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
+     https://github.com/AnchorageBot   
      September 2019 by ATS
 */
 
