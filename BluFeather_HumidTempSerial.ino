@@ -34,7 +34,8 @@
      https://learn.adafruit.com/adafruit-io-basics-temperature-and-humidity?view=all
    
    ATS
-     https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg?view_as=subscriber
+     https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
+     https://github.com/AnchorageBot
      modified August 2019
   
 ***/
