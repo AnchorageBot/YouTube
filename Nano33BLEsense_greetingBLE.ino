@@ -22,9 +22,8 @@
     https://devzone.nordicsemi.com/nordic/short-range-guides/b/bluetooth-low-energy/posts/ble-advertising-a-beginners-tutorial
 
   ATS Code Repository and How-to Videos
-    https://github.com/AnchorageBot/YouTube
-
-    https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg/featured
+       https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
+       https://github.com/AnchorageBot
   
 */
 
