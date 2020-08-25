@@ -28,12 +28,14 @@
     revised 2019/08/17 by SM  
    Sandeep Mistry 
     https://github.com/arduino-libraries/Arduino_HTS221
-    July 2019 by Sandeep Mistry
+    July 2019 
     https://github.com/arduino-libraries/Arduino_LPS22HB
-    July 2019 by Sandeep Mistry
+    July 2019 
     https://github.com/arduino-libraries/Arduino_APDS9960
-    August 2019 by Sandeep Mistry
-   Modified January 2020 by ATS
+    August 2019 
+   ATS
+     https://github.com/AnchorageBot
+     modified january 2020
    
 */
 
