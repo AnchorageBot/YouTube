@@ -32,7 +32,10 @@
  Engineering
   Adafruit 
     https://learn.adafruit.com/adafruit-pcf8523-real-time-clock?view=all#rtc-with-arduino
-  Modified by ATS 12/2019        
+  ATS 
+    https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
+    https://github.com/AnchorageBot
+    12/2019        
 
 Reference
   Unix Time
