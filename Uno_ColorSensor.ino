@@ -72,6 +72,11 @@
      https://en.wikipedia.org/wiki/Color_difference
     Wiki - RGB Model 
      https://en.wikipedia.org/wiki/RGB_color_model  
+     
+    ATS
+      https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
+      https://github.com/AnchorageBot   
+      September 2019  
     
 **************************************************/
 
