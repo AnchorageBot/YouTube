@@ -10,9 +10,10 @@
  *   Developed by Adafruit
  *     https://learn.adafruit.com/adafruit-feather-huzzah-esp8266
  *     https://learn.adafruit.com/adafruit-tsl2591
- *   Modified by  
+ *   Modified by ATS  
+ *     https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
  *     https://github.com/AnchorageBot
- *     ATS, Feb 2019
+ *     Feb 2019
  */
 
 /************************* TLS2591 Configuration ****************************/
