@@ -1,5 +1,6 @@
 /*
- * This sketch will log (SD card) and print (serial monitor) data from the PT550, the SEN0193 sensor, the DHT22 sensor and the RTC shield every 6 seconds using Arduino IDE 1.8.10
+ * This sketch will log (SD card) and print (serial monitor) data from the PT550, the SEN0193 sensor, the DHT22 sensor and the RTC shield
+ * every 6 seconds using Arduino IDE 1.8.10
  
    Materials Schedule
    (1 each) Adafruit Feather 32u4 Bluefruit LE with stacking headers
@@ -67,6 +68,7 @@
    Paul McWhorter Lesson 21
      http://www.toptechboy.com/arduino/arduino-lesson-21-log-sensor-data-to-an-sd-card/    
    ATS
+     https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg?view_as=subscriber
      modified December 2019     
  
  */
