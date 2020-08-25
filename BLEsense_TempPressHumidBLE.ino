@@ -1,239 +1,360 @@
 /*
- 
-  This script will use a Arduino Nano 33 BLE to share air temp, humidity, & pressure sensor data
-  via BLE radio (functions as a BLE peripheral) or via serial cable/termial
-
-  Materials Schedule  
-    Arduino Nano 33 BLE
-      https://store.arduino.cc/usa/nano-33-ble
-    Adafruit Bluefruit LE Connect App for Mobile
-      https://learn.adafruit.com/bluefruit-le-connect  
-    nRF Connect App for Mobile
-      https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Connect-for-mobile
-    LightBlue App for Mobile
-      https://punchthrough.com/testing-bluetooth-low-energy-devices/
-
-   Assembly
-     1.Update Arduino software
-       a.Tools->Board->Boards Manager->Arduino nRF528x mbed Core
-       b.Tools->Board->Arduino NANO 33 BLE
-       c.Tools-Port->/dev/cu.usbmodem14101 (Arduino NANO 33 BLE)
-       d.Sketch->Include Library->Add .ZIP Library (HTS221, LPS22HB, and APDS9960 from Sandeep Mistry's github) 
-         or 
-         Tools -> Manage Libraries (HTS221, LPS22HB, and APDS9960)
-     2.Attach Cerberus USB Cable to Nano and Laptop or Raspberry Pi
-     3.Verify/compile & upload program to NANO 33 BLE
-       a.Sketch->Verify/Compile
-       b.Sketch->Upload   
-
-   Engineering
-     Arduino
-       https://www.arduino.cc/en/Guide/NANO33BLESense
-         revised 2019/08/17 by SM  
-      
-     Sandeep Mistry 
-       https://github.com/arduino-libraries/Arduino_HTS221
-         July 2019 
-       https://github.com/arduino-libraries/Arduino_LPS22HB
-         July 2019
-       https://github.com/arduino-libraries/Arduino_APDS9960
-         August 2019
-  
-      Monica Houston
-        https://create.arduino.cc/projecthub/monica/getting-started-with-bluetooth-low-energy-ble-ab4c94
-      
-      Garry Stafford
-        https://itnext.io/ble-and-gatt-for-iot-2ae658baafd5
-
-      Leonardo Cavagnis
-        https://github.com/leonardocavagnis/SmartThermostat_ArduinoBLE/blob/master/SmartThermostat_sketch/SmartThermostat_sketch.ino        
-      
-      Arduino BatteryMonitor example by OkDo
-        https://www.okdo.com/project/get-started-with-arduino-nano-33-ble/
-  
-      Bluetooth low energy Advertising, a beginner's tutorial by Nordic Semi
-        https://devzone.nordicsemi.com/nordic/short-range-guides/b/bluetooth-low-energy/posts/ble-advertising-a-beginners-tutorial
-        
-      ATS Code Repository and How-to Videos
-        https://github.com/AnchorageBot/YouTube
-        https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg/featured
-  
-*/
+ *   This sketch will print (serial monitor), log (SD card), and broadcast (BLE) data from a TSL2591 sensor, a SEN0193 sensor, a DHT22 sensor, 
+ *   and a RTC/SD card shield/Adalogger Featherwing every 60 seconds via a Feather 32u4 BLE MCU, the Arduino IDE 1.8.10, & Adafruit Bluefruit app
+ *   
+ *   This sketch must have lines carefully & selectively commented out in order to fit/meet the 28672 byte memory limitations of the 32u4 BLE MCU
+ *     Current sketch uses 28612 bytes (99%) of program storage space and global variables use 1693 bytes of dynamic memory
+ *
+ *   TSL2591 Digital Light Sensor 
+ *   https://learn.adafruit.com/adafruit-tsl2591
+ *   SCL to I2C Clock
+ *   SDA to I2C Data
+ *   VCC to 3.3-5V DC
+ *   GND to ground
+ *   
+ *   SEN0193
+ *   https://www.dfrobot.com/product-1385.html
+ *   A0 to (A)  
+ *   VCC to (+)
+ *   GND to (-)
+ *   
+ *   DHT22
+ *   https://www.adafruit.com/product/393
+ *   D9 to (OUT)
+ *   VCC to (+)
+ *   GND to (-)
+ *   
+ *   RTC/SD Card Shield/Adalogger Featherwing
+ *   https://www.adafruit.com/product/2922
+ *   
+ *   Terminal Block Breakout
+ *   https://www.adafruit.com/product/2926
+ *   
+ *   32u4 BLE (Bluefruit) Feather MCU                                
+ *   https://www.adafruit.com/product/2829               
+ *   
+ *   Engineering 
+ *     Development by Adafruit & DFrobot
+ *     Modified by ATS
+ *       https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
+ *       https://github.com/AnchorageBot
+ *   
+ */
 
 // === Libraries ================================
 
-#include <ArduinoBLE.h>
-// BLE Library
-// https://www.arduino.cc/en/Reference/ArduinoBLE
-// https://github.com/arduino-libraries/ArduinoBLE
+#include <SPI.h>                     // Load Serial Peripheral Interface (SPI) library 
+//#include <Wire.h>                    // Load I2/TWC library
 
-#include <Arduino_HTS221.h>
-// air temp & humidty sensor library
-// https://www.arduino.cc/en/Reference/ArduinoHTS221
-// https://github.com/arduino-libraries/Arduino_HTS221  
+#include <Adafruit_Sensor.h>         // Load Adafruit sensors library
 
-#include <Arduino_LPS22HB.h>
-// air pressure sensor library
-// https://www.arduino.cc/en/Reference/ArduinoLPS22HB
-// https://github.com/arduino-libraries/Arduino_LPS22HB
+#include "Adafruit_TSL2591.h"        // Load TSL2591 library
+
+#include <DHT.h>;                    // Load DHT22 libraries
+#include <DHT_U.h> 
+
+#include "RTClib.h"                  // Load PCF 8523 RTC library
+#include <SD.h>                      // Load SD card library
+
+#include <Adafruit_BLE.h>            // Load Adafruit bluetooth libraries
+#include <Adafruit_BluefruitLE_SPI.h>
+#include "Adafruit_BluefruitLE_UART.h"
+
+//#if SOFTWARE_SERIAL_AVAILABLE        // Load library for multiple serial connections
+  //#include <SoftwareSerial.h>
+//#endif                               // Used to terminate a multiple line if command
 
 // === Gobal constants and variables ============
 
-int sensorTime = 3000;               // sensor calibration & output delay, 60000 millisec = 60 sec
+int sensorTime = 60000;              // Calibration & output delay for all sensors, 60000 millisec = 60 sec
 
-//BLEService greetingService("180C");                            // user defined BLE service
+// Light sensor TSL2591 
+Adafruit_TSL2591 tsl = Adafruit_TSL2591(2591);  // Store light values 
 
-//BLEStringCharacteristic greetingCharacteristic("2A56",         // standard 16-bit Greeting characteristic UUID
-//                                        BLERead, 13);          // remote clients can read 
-//static const char* greeting = "Arduino Nano 33 BLE Sense";                                        
+// Soil humidity sensor SEN0193
+const int Air = 520;              // Adjust max Air value as neccessary (520 original)
+const int Water = 260;            // Adjust min Water value as neccessary (260 original)
+int phase = (Air - Water)/3;   
+int Soil = 0;                     // Set initial sensor reading to 0 
+String dry = "Thirsty ";                  // dry range: 430 to 520
+String happy = "Happy ";                  // happy range: 350 to 430
+String soaked = "Soaked ";                // soaked range: 260 to 350
+
+// Air temperature & humidity sensor DHT22
+#define DHTPIN A5                // DHT-22 sensor uses analog pin A5 to communicate data
+#define DHTTYPE DHT22            // DHT 22 sensor type is AM2302
+float hum;                       // Store humidity in percent
+float tempC;                     // Store temperature in Celcius
+float tempF;                     // Store temperature in Fahrenheit
+DHT dht(DHTPIN, DHTTYPE);        // Initialize DHT sensor
+
+// RTC/SD Card Shield / Adalogger
+RTC_PCF8523 rtc;
+char Days[7][12] = {"Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"};
+
+#define cardSelect 10            // Adalogger uses pin 10 to communicate data with 32u4 pin 33 for ESP32      
+File logfile;                    // Data object sensor data is written to
+
+// BlueTooth (BLE) broadcasting/commo
+String BROADCAST_NAME = "Berry32u4";
+String BROADCAST_CMD = String("AT+GAPDEVNAME=" + BROADCAST_NAME);
+#define BLUEFRUIT_SPI_CS 8
+#define BLUEFRUIT_SPI_IRQ 7
+#define BLUEFRUIT_SPI_RST 4 
+Adafruit_BluefruitLE_SPI ble(BLUEFRUIT_SPI_CS, BLUEFRUIT_SPI_IRQ, BLUEFRUIT_SPI_RST);
+uint8_t readPacket(Adafruit_BLE *ble, uint16_t timeout);
+float parsefloat(uint8_t *buffer);
+void printHex(const uint8_t * data, const uint32_t numBytes);
+extern uint8_t packetbuffer[];
+char buf[60];
 
 
-BLEService environmentService("181A");                         // standard Environmental Sensing BLE service
+//===Configure Light sensor TSL2591 ============
 
-BLEIntCharacteristic tempCharacteristic("2A6E",                // standard 16-bit Temperature characteristic
-                                        BLERead | BLENotify);  // remote clients can read and get updates 
-BLEUnsignedIntCharacteristic humidCharacteristic("2A6F",       // unsigned 16-bit Humidity characteristic
-                                        BLERead | BLENotify);  // remote clients can read and get updates 
-BLEUnsignedIntCharacteristic pressCharacteristic("2A6D",       // unsigned 32-bit Pressure characteristic
-                                        BLERead | BLENotify);  // remote clients can read and get updates                                                                                   
+void config2591(void)
+{
+  // Change the gain to adapt to brighter/dimmer light situations
+  //tsl.setGain(TSL2591_GAIN_LOW);    // 1x gain (bright light)
+  tsl.setGain(TSL2591_GAIN_MED);      // 25x gain
+  //tsl.setGain(TSL2591_GAIN_HIGH);   // 428x gain
+
+  // Changing the integration time gives timelines for low or bright light situtations
+  //tsl.setTiming(TSL2591_INTEGRATIONTIME_100MS);  // shortest integration time (bright light)
+  tsl.setTiming(TSL2591_INTEGRATIONTIME_300MS);
+  // tsl.setTiming(TSL2591_INTEGRATIONTIME_600MS);  // longest integration time (dim light)
+
+  /* Display the gain and integration time for reference sake */  
+  Serial.println(F("------------------------------------"));
+  Serial.print  (F("Gain:         "));
+  tsl2591Gain_t gain = tsl.getGain();
+  switch(gain)
+  {
+    //case TSL2591_GAIN_LOW:
+      //Serial.println(F("1x (Low)"));
+      //break;
+    case TSL2591_GAIN_MED:
+      Serial.println(F("25x (Med)"));
+      break;
+    //case TSL2591_GAIN_HIGH:
+      //Serial.println(F("428x (High)"));
+      //break;
+    //case TSL2591_GAIN_MAX:
+      //Serial.println(F("9876x (Max)"));
+      //break;
+  }
+  Serial.print  (F("Timing:       "));
+  Serial.print((tsl.getTiming() + 1) * 100, DEC); 
+  Serial.println(F(" ms"));
+  Serial.println(F("------------------------------------"));
+  Serial.println(F(""));
+}
 
 //=== Setup code here, runs once ================
 
-void setup() {
-  Serial.begin(9600);                                          // initialize serial communication
-  while (!Serial);                                             // uncomment for laptop use & comment for wall wart use
+void setup() 
+{
+  Serial.begin (9600);                                  // Setup the serial monitor for data analysis & debugging
 
-  pinMode(LED_BUILTIN, OUTPUT);                                // initialize built-in LED pin
-
-  if (!BLE.begin()) {                                          // initialize NINA B306 BLE radio
-    Serial.println("BLE failure!");
+  if (! rtc.begin()) {                                  // Initialize the RTC 
+    Serial.println("RTC MIA");
     while (1);
   }
 
-      if (!HTS.begin()) {                                      // initialize HTS221 sensor
-        Serial.println("temp & humidity sensor failure!");
-        while (1);
-    }
+ if (! rtc.initialized()) {
+    Serial.println("RTC KIA");
+     rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));    // line sets the RTC to the date & time this sketch was compiled
+    // rtc.adjust(DateTime(2014, 1, 21, 3, 0, 0));      // line sets the RTC with an explicit date & time, for example Jan 21, 2014 at 3am:
+  }  
 
-    if (!BARO.begin()) {                                      // initialize LPS22HB sensor
-        Serial.println("pressure sensor failure!");
-        while (1);
-    }
+pinMode(10, OUTPUT);                                    // Adalogger reserves/uses 10 as an output  
+  if (! SD.begin()) {                                   // Initialize the SD card (secure digital card)
+    Serial.println("SD MIA");
+    while (1);
+  }  
 
-    BARO.readPressure();                                      // Avoid barometer sensor bug
-    delay(sensorTime);                                        // https://forum.arduino.cc/index.php?topic=660360.0
-  
+  config2591();                                        // Configure TSL2591 sensor
 
-  BLE.setLocalName("Nano33BLEsense");                           // Set name for connection
-  
-  //BLE.setAdvertisedService(greetingService);                  // Advertise greeting service
-  //greetingService.addCharacteristic(greetingCharacteristic);  // Add characteristic to service
-  //BLE.addService(greetingService);                            // Add service
-  //greetingCharacteristic.setValue(greeting);                  // Set greeting string
+  dht.begin();                                         // Start DHT22 sensor
 
-  BLE.setAdvertisedService(environmentService);                 // Advertise environment service
-  environmentService.addCharacteristic(tempCharacteristic);     // Add temperature characteristic
-  environmentService.addCharacteristic(humidCharacteristic);    // Add humidity characteristic
-  environmentService.addCharacteristic(pressCharacteristic);    // Add pressure characteristic  
-  BLE.addService(environmentService);                           // Add environment service  
-
-  BLE.advertise();                                              // Start advertising
-  //Serial.print("Peripheral device MAC: ");
-  //Serial.println(BLE.address());
-  //Serial.println("Waiting for connections...");
-}
-
-//=== Main code, runs/loops repeatedly==========
-
-void loop() {
-
-  delay(sensorTime);                                          // sensor calibration & output delay
-
-  hts221serial();                                             // temp & humidity data via serial
-  lps22HBserial();                                            // pressure data via serial
-  //CentralSerial();                                          // BLE Central status via serial
-
-  hts221ble();                                                // temp & humidity data via BLE radio
-  lps22HBble();                                               // pressure data via BLE radio
-  CentralBLE();                                               // BLE Central connection
+  ble.begin();                                        //  Set up bluetooth
+  ble.echo(false);                                    //  Turn off echo
+  ble.verbose(false);
+  BROADCAST_CMD.toCharArray(buf, 60);
+  ble.sendCommandCheckOK(buf);
+  delay(500);
+  ble.setMode(BLUEFRUIT_MODE_DATA);                   //  Set to data mode
+  delay(500);
 
 }
 
-//===Serial functions ===========================
+//=== Main code here, runs/loops repeatedly=====
 
-void hts221serial() {                                         // print HTS221 temp & humidty data via serial terminal
-  float temperature = HTS.readTemperature();                  // read HTS221 temp & humidty sensor
-  float humidity    = HTS.readHumidity();
-  float tempF = (temperature*(1.8))+32;
-  Serial.print("Temperature = ");
-  Serial.print(temperature);
-  Serial.print(" °C  ");
-  Serial.print(tempF);
-  Serial.println(" °F");
-
-  Serial.print("Humidity    = ");
-  Serial.print(humidity);
-  Serial.println(" %");
-  Serial.println(); 
+void loop()
+{
+  pcf8523();
+  tsl2591();
+  sen0193();   
+  dht22();   
+  SDcard();
+  BlueTooth();
 }
 
+//===Sensor functions ===========================
 
-void lps22HBserial() {                                        // print LPS22HB pressure data via serial terminal
-  float pressure = BARO.readPressure();                       // read LPS22HB pressure sensor 
-  float psi = pressure/6.895;
-  float hg = pressure/3.386;
-  Serial.print("Pressure = ");                              
-  Serial.print(pressure);
-  Serial.print(" kPa  ");
-  Serial.print(psi);
-  Serial.print(" psi  ");
-  Serial.print(hg);
-  Serial.println(" inches of mercury");
-  Serial.println();   
-}  
-
-void CentralSerial() {
-    BLEDevice central = BLE.central();                       // Wait for a BLE central to connect
-    if (central) {                                           // if central connects
-    Serial.print("Connected to central MAC: ");
-    Serial.println(central.address());                       // print central's address via serial terminal
-    digitalWrite(LED_BUILTIN, HIGH);                         // turn on the LED
-
-    while (central.connected()){}                            // keep looping while connected
-    
-    digitalWrite(LED_BUILTIN, LOW);                          // when the central disconnects, turn off the LED
-    Serial.print("Disconnected from central MAC: ");
-    Serial.println(central.address());
-    Serial.println();     
-  }
+void pcf8523()                  // RTC (real time clock) function 
+{
+    DateTime now = rtc.now();                          
+    Serial.print(now.year(), DEC);
+    Serial.print('/');
+    Serial.print(now.month(), DEC);
+    Serial.print('/');
+    Serial.print(now.day(), DEC);
+    Serial.print(" (");
+    Serial.print(Days[now.dayOfTheWeek()]);
+    Serial.print(") ");
+    Serial.print(now.hour(), DEC);
+    Serial.print(':');
+    Serial.print(now.minute(), DEC);
+    Serial.print(':');
+    Serial.print(now.second(), DEC);
+    Serial.println();
 }
 
-//===BLE functions ==============================
-
-void hts221ble() {                                            // HTS221 temp & humidty data via BLE radio
-  float temperature = HTS.readTemperature();                  // read HTS221 temp & humidty sensor 
-  float humidity    = HTS.readHumidity();
-  float tempF = (temperature*(1.8))+32;
-  tempCharacteristic.writeValue(temperature);                 // advertise temperature (2A6E) via BLE
-  humidCharacteristic.writeValue(humidity);                   // advertise humidity (2A6F) via BLE 
-  
-  // https://www.arduino.cc/en/Reference/ArduinoBLEBLECharacteristicwriteValue
-  // https://www.arduino.cc/en/Reference/ArduinoBLEBLECharacteristicreadValue    
-  // https://www.arduino.cc/en/Reference/ArduinoBLEBLEDescriptorread 
+void tsl2591()               // Light sensor function
+{
+  // Read 32 bits with top 16 bits IR, bottom 16 bits full spectrum for math & comparisons
+  uint32_t lum = tsl.getFullLuminosity();
+  uint16_t ir, full;
+  ir = lum >> 16;
+  full = lum & 0xFFFF;
+  //Serial.print(F("[ ")); Serial.print(millis()); Serial.print(F(" ms ] "));
+  //Serial.print("IR:"); Serial.print(ir);  Serial.print("  ");
+  Serial.print("Full:"); Serial.print(full); Serial.print("  ");
+  //Serial.print("Vis:"); Serial.print(full - ir); Serial.print("  ");
+  Serial.print("Lux:"); Serial.println(tsl.calculateLux(full, ir), 1);
+  //Serial.println();
 }
 
-void lps22HBble() {                                           // LPS22HB pressure data via BLE radio
-    float pressure = BARO.readPressure();                     // read LPS22HB pressure sensor
-    float psi = pressure/6.895;
-    float hg = pressure/3.386;
-    pressCharacteristic.writeValue(pressure);                 // advertise pressure (2A6D) via BLE 
+void sen0193()              // Soil moisture sensor function
+{
+ // read soil moisture sensor data
+ Soil = analogRead(A0);
+
+ // report soil moisture sensor values 
+ String drySensor = dry + Soil;
+ String happySensor = happy + Soil;
+ String soakedSensor = soaked + Soil;
+
+ if(Soil > Water && Soil < (Water + phase))
+ {
+   Serial.println(soakedSensor);
+ }
+ else if(Soil > (Water + phase) && Soil < (Air - phase))
+ {
+   Serial.println(happySensor);
+ }
+
+ else if(Soil < Air && Soil > (Air - phase))
+ {
+   Serial.println(drySensor);
+ }
+ //Serial.println(" "); 
 }
 
-void CentralBLE() {
-  BLEDevice central = BLE.central();                          // Wait for a BLE central to connect
-  if (central) {                                              // if central connects
-     digitalWrite(LED_BUILTIN, HIGH);                         // turn on the LED   
-     while (central.connected()){}                            // keep looping while connected  
-     digitalWrite(LED_BUILTIN, LOW);                          // when the central disconnects, turn off the LED                
-  }
+void dht22()            // Air temp & humidity sensor function
+{
+    delay(sensorTime);  // Delay to stabilize sensor, optimize data output, minimize energy use 
+
+    hum = dht.readHumidity();                   // Get Humidity value
+    tempC= dht.readTemperature();               // Get Temperature value
+    tempF= (tempC*(1.8))+32;
+
+  // Send results to Serial Monitor
+
+    Serial.print("Hum % "); Serial.print(hum);       //Serial.print("  ");
+
+    Serial.print("Temp °C "); Serial.print(tempC);  //Serial.print("  ");
+
+    //Serial.print("Temp °F "); Serial.print(tempF);  //Serial.print(" ");
+
+    Serial.println(" ");                     
 }
+
+void SDcard()          // SD card function 
+{
+  logfile = SD.open("BluData.txt", FILE_WRITE);   // open and name file for sensor data to be saved to the SD card
+
+  DateTime now = rtc.now();                       // connect to RTC 
+  logfile.print(now.year(), DEC);                 // write RTC data to SD card
+  logfile.print(',');
+  logfile.print(now.month(), DEC);
+  logfile.print(',');
+  logfile.print(now.day(), DEC);
+  logfile.print(',');
+  logfile.print(Days[now.dayOfTheWeek()]);
+  logfile.print(',');
+  logfile.print(now.hour(), DEC);
+  logfile.print(':');
+  logfile.print(now.minute(), DEC);
+  logfile.print(':');
+  logfile.print(now.second(), DEC);
+  logfile.print(',');  
+
+  uint32_t lum = tsl.getFullLuminosity();        // connect to light sensor 
+  uint16_t ir, full;
+  ir = lum >> 16;
+  full = lum & 0xFFFF;                              
+  logfile.print("IR");                           
+  logfile.print(','); 
+  logfile.print(ir);                             // write light data to SD card
+  logfile.print(','); 
+  logfile.print("Full"); 
+  logfile.print(','); 
+  logfile.print(full); 
+  logfile.print(','); 
+  logfile.print("Vis"); 
+  logfile.print(','); 
+  logfile.print(full - ir); 
+  logfile.print(','); 
+  logfile.print("Lux"); 
+  logfile.print(','); 
+  logfile.print(tsl.calculateLux(full, ir), 1);  
+  logfile.print(',');  
+
+  Soil = analogRead(A0);                         // connect to soil moisture sensor
+  logfile.print("Soil");
+  logfile.print(','); 
+  logfile.print(Soil);                           // write soil moisture data to SD card
+  logfile.print(',');   
+
+  hum = dht.readHumidity();                      // connect to air temp and humidity sensor
+  tempC= dht.readTemperature();                   
+  tempF= (tempC*(1.8))+32;
+  logfile.print("Hum %");
+  logfile.print(',');                        
+  logfile.print(hum);                            // write air humidity value to SD card
+  logfile.print(',');   
+  logfile.print("Temp C");
+  logfile.print(','); 
+  logfile.print(tempC);                           // write air temp value in C to SD card
+  logfile.print(',');
+  logfile.print("Temp F");
+  logfile.print(',');    
+  logfile.print(tempF);                          // write air temp value in F to SD card
+  logfile.println("");                           
+
+  logfile.close();                               //  close the sensor data file
+}
+
+void BlueTooth()
+{
+    ble.print(Soil);
+    ble.print(",");
+    ble.print(tempF);
+    //ble.print(',');        
+    //ble.print(hum);                            
+    //ble.print(',');
+    //ble.print(full); 
+    //ble.print(',');    
+    ble.println();
+}    
