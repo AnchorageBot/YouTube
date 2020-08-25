@@ -1,3 +1,6 @@
 # YouTube
 
-Code repository for YouTube how-to videos
+Code repository for how-to YouTube videos focused upon Robots, TinyML, & IoT
+
+  https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
+
