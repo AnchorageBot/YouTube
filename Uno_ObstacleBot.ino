@@ -50,9 +50,12 @@
  *     
  * Engineering    
  *   DroneBot Workshop http://dronebotworkshop.com
- *   DFRobot https://wiki.dfrobot.com/Arduino_Motor_Shield__L298N___SKU_DRI0009_
- *   Modified by ATS
- *     
+ *     DFRobot https://wiki.dfrobot.com/Arduino_Motor_Shield__L298N___SKU_DRI0009_
+ *   
+ *   ATS
+     https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
+     https://github.com/AnchorageBot   
+
  */
 
 //--------Libraries--------       
