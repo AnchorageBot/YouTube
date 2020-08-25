@@ -6,6 +6,8 @@
     Adafruit
       idea https://github.com/adafruit/DHT-sensor-library
     ATS
+      https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
+      https://github.com/AnchorageBot
       Feb 2020
 
 */  
