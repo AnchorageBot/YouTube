@@ -1,6 +1,7 @@
 /*
 
-This script uses a ESP32 Feather to read humidity, pressure, temperature, & altitude from the BME280 sensor over I2C and broadcast data via Wifi to a Raspberry Pi 4
+This script uses a ESP32 Feather to read humidity, pressure, temperature, & altitude from the BME280 sensor
+over I2C and broadcast data via Wifi to a Raspberry Pi 4
 
 Hardware connections:
   BME280 -> ESP32 Feather
@@ -48,8 +49,8 @@ Raspberry 4 Hardware & Code
       
 Engineering fusion
     Anchorage Tech Solutions June 2020
-    https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg/featured?view_as=subscriber
-    https://github.com/AnchorageBot
+       https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
+       https://github.com/AnchorageBot
 
 */
 
