@@ -30,9 +30,12 @@
      b.Sketch->Upload  
      
   Engineering
-   https://learn.adafruit.com/adafruit-io-basics-temperature-and-humidity?view=all
    Adafruit
-   modified August 2019 by ats
+     https://learn.adafruit.com/adafruit-io-basics-temperature-and-humidity?view=all
+   
+   ATS
+     https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg?view_as=subscriber
+     modified August 2019
   
 ***/
 
