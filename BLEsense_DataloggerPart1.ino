@@ -1,5 +1,6 @@
 /*
-  This sketch uses onboard sensors from a Arduino Nano 33 BLE Sense to read air temp (HTS221), humidity (HTS221), pressure (LPS22HB), and RGB color (APDS9960) on an adjustable time interval using Arduino IDE 1.8.10
+  This sketch uses onboard sensors from a Arduino Nano 33 BLE Sense to read air temp (HTS221), humidity (HTS221), pressure (LPS22HB),
+  and RGB color (APDS9960) on an adjustable time interval using Arduino IDE 1.8.10
   
   Materials Schedule
    (1 each) Arduino Nano 33 BLE Sense
