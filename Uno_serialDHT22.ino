@@ -33,9 +33,13 @@ Observe & report temp & humidity
 
   Engineering
 
-   Created by DroneBot Workshop 2017
+   DroneBot Workshop 2017
     https://dronebotworkshop.com/hc-sr04-ultrasonic-distance-sensor-arduino/
-   Modified by ats 2019-03
+   
+   ATS 
+     https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
+     https://github.com/AnchorageBot   
+     2019-03
    
 *******************************/
 
