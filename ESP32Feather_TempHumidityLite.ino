@@ -1,6 +1,14 @@
-//  This sketch uses a Adafruit Huzzah32 with a DHT22 sensor to measure temp and humidity every 60 seconds using Arduino IDE 1.8.10
-//  Engineering idea https://github.com/adafruit/DHT-sensor-library
-//  Engineering modification ATS, Feb 2020
+/*  
+
+  This sketch uses a Adafruit Huzzah32 with a DHT22 sensor to measure temp and humidity every 60 seconds using Arduino IDE 1.8.10
+  
+  Engineering 
+    Adafruit
+      idea https://github.com/adafruit/DHT-sensor-library
+    ATS
+      Feb 2020
+
+*/  
 
 #include <DHT.h>
 
