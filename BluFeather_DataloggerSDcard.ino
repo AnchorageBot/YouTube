@@ -68,7 +68,8 @@
    Paul McWhorter Lesson 21
      http://www.toptechboy.com/arduino/arduino-lesson-21-log-sensor-data-to-an-sd-card/    
    ATS
-     https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg?view_as=subscriber
+     https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
+     https://github.com/AnchorageBot
      modified December 2019     
  
  */
