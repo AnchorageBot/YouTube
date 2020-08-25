@@ -1,6 +1,7 @@
 /*
  *   This sketch will print (serial monitor), log (SD card), and broadcast (BLE) data from a TSL2591 sensor, a SEN0193 sensor, a DHT22 sensor, 
- *   and a RTC/SD card shield/Adalogger Featherwing every 60 seconds via a Feather 32u4 BLE MCU, the Arduino IDE 1.8.10, & Adafruit Bluefruit app
+ *   and a RTC/SD card shield/Adalogger Featherwing every 60 seconds via a Feather 32u4 BLE MCU, the Arduino IDE 1.8.10
+ *   & Adafruit Bluefruit app
  *   
  *   This sketch must have lines carefully & selectively commented out in order to fit/meet the 28672 byte memory limitations of the 32u4 BLE MCU
  *     Current sketch uses 28612 bytes (99%) of program storage space and global variables use 1693 bytes of dynamic memory
