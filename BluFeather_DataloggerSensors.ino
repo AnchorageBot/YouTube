@@ -62,7 +62,8 @@
      created 2015-10
    DFrobot - PT550 sensor    
    ATS
-     https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg?view_as=subscriber
+     https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
+     https://github.com/AnchorageBot
      modified December 2019
   
 ***/
