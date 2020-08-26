@@ -37,7 +37,11 @@ Materials Schedule
   
     DroneBot Workshop 2017
      http://dronebotworkshop.com
-    Modified by ats 03-2019 
+     
+    ATS
+     https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
+     https://github.com/AnchorageBot          
+     03-2019 
   
 */
 
