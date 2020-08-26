@@ -21,7 +21,9 @@
 #
 # https://pypi.org/project/RPi.GPIO/
 # https://docs.python.org/3/library/time.html
-# Script modified by ATS
+
+# ATS
+# https://github.com/AnchorageBot
 
 # Libraries
 import RPi.GPIO as GPIO
