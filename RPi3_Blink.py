@@ -21,6 +21,10 @@
 #    Connect GND black wire to RPi GPIO pin 6
 #    Connect PWR red wire to RPi GPIO pin 2
 #    Connect S white wire to RPi GPIO pin 7
+
+#   ATS
+#   https://github.com/AnchorageBot
+
 #
 #  Libraries
 import RPi.GPIO as GPIO
