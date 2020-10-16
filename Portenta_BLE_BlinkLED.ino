@@ -118,22 +118,22 @@ void blink()  // Blink the onboard LED
 }
 
 void loop() {
-  // listen for BLE peripherals to connect:
+  // listen for BLE centrals attempting to connect:
   BLEDevice central = BLE.central();
 
-  // if a central is connected to peripheral:
+  // if a central connects to the peripheral: print out a status update via serial:
   if (central) {
     Serial.print("Connected to central: ");
     // print the central's MAC address:
     Serial.println(central.address());
 
 
-    // while the central is still connected to peripheral:
+    // while the central is connected to the peripheral blink the onboard LED:
     while (central.connected()) {
       blink();
     }
 
-    // when the central disconnects, print it out:
+    // when the central disconnects, print out a status update via serial:
     Serial.print(F("Disconnected from central: "));
     Serial.println(central.address());
   }
