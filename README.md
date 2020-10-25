@@ -7,6 +7,7 @@ Code repository for how-to YouTube videos focused upon Robots, TinyML, & IoT
   
 Ardunino Nano 33 BLE Sense Pinouts
 
+  https://github.com/AnchorageBot/YouTube/blob/master/pinoutNano33bleSense%20copy.jpg
   
 
 
