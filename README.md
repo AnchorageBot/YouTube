@@ -6,9 +6,13 @@ URL for YouTube videos to accompany the Github
 
   https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg
     
-URL for a photo of the Ardunino Nano 33 BLE Sense Pinouts
+URL for a photo of the Arduino Nano 33 BLE Sense Pinouts
 
   https://github.com/AnchorageBot/YouTube/blob/master/pinoutNano33bleSense%20copy.jpg
+  
+URL for a photo of the Arduino Portenta H7 Pinouts
+
+
   
 
 
