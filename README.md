@@ -12,6 +12,7 @@ URL for a photo of the Arduino Nano 33 BLE Sense Pinouts
   
 URL for a photo of the Arduino Portenta H7 Pinouts
 
+  https://github.com/AnchorageBot/YouTube/blob/master/pinoutPortentaH7.pdf
 
   
 
