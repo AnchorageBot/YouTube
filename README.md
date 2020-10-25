@@ -14,7 +14,9 @@ URL for a photo of the Arduino Portenta H7 Pinouts
 
   https://github.com/AnchorageBot/YouTube/blob/master/pinoutPortentaH7.pdf
 
-  
+URL for a photo of the Adafruit Feather 32u4 Bluefruit Pinouts
+
+  https://github.com/AnchorageBot/YouTube/blob/master/pinoutBlueFeather32copy.png
 
 
 
