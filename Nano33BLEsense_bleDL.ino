@@ -7,10 +7,6 @@
     Maximum is 983040 bytes.
   Global variables use 71792 bytes (27%) of dynamic memory, leaving 190352 bytes for local variables.
     Maximum is 262144 bytes.
-  Sketch uses 309344 bytes (31%) of program storage space.
-    Maximum is 983040 bytes.
-  Global variables use 71792 bytes (27%) of dynamic memory, leaving 190352 bytes for local variables.
-    Maximum is 262144 bytes.
 
   Materials Schedule
     Hardware
