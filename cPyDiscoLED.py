@@ -1,4 +1,4 @@
-# Make a neopixel disco using the Circuit Playground Bluefruit and Circuit Python
+# Make a neopixel disco using the Circuit Playground Bluefruit and CircuitPython
 
 # Ensure CIRCUITPY Drive lib folder has the following items
     # adafruit_ble
@@ -23,6 +23,9 @@
 # Materials
   # Circuit Playground Bluefruit https://www.adafruit.com/product/4333
   # USB A to Micro B data cable https://www.adafruit.com/product/592    
+
+# Software
+    # Mu Python Editor https://codewith.mu
     
 import time
 from adafruit_circuitplayground import cp
