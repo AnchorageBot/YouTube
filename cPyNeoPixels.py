@@ -1,8 +1,14 @@
 # Blink CircuitPlaygroundBLE's onboard Neopixels
 
+# Dr Gallaugher's CPB Tutorials
+    # https://www.youtube.com/playlist?list=PL9VJ9OpT-IPSsQUWqQcNrVJqy4LhBjPX2
+
 # Adafruit neopixel tutorial
   # https://learn.adafruit.com/adafruit-circuit-playground-express/circuitpython-neopixel
   
+# Adafruit CircuitPython Neopixel library
+    # https://circuitpython.readthedocs.io/projects/neopixel/en/latest/
+   
 # Materials
   # Circuit Playground Bluefruit https://www.adafruit.com/product/4333
   # USB A to Micro B data cable https://www.adafruit.com/product/592
