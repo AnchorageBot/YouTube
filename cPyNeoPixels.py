@@ -1,4 +1,4 @@
-# Blink CircuitPlaygroundBLE's onboard Neopixels
+# Blink Circuit Playground Bluefruit's onboard Neopixels using CircuitPython
 
 # Dr Gallaugher's CPB Tutorials
     # https://www.youtube.com/playlist?list=PL9VJ9OpT-IPSsQUWqQcNrVJqy4LhBjPX2
@@ -12,6 +12,9 @@
 # Materials
   # Circuit Playground Bluefruit https://www.adafruit.com/product/4333
   # USB A to Micro B data cable https://www.adafruit.com/product/592
+
+# Software
+    # Mu Python Editor https://codewith.mu
 
 import time
 import board
