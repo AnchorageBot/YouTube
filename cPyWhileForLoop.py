@@ -44,3 +44,4 @@ while True:                 # While True Loop
         pixels[NeoPixelNumber] = (255,0,255)
         time.sleep(0.5)
     pixels.fill((0, 0, 0))                        # Turn off the NeoPixels
+    time.sleep(0.5)
