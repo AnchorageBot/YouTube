@@ -37,7 +37,7 @@ sensor_temp = microcontroller.cpu[0].temperature
 fahrenheit = (sensor_temp * (9/5)) + 32
 
 while True: 
-    print(fahrenheit)                   # print temperature in serial window of Mu Editor
+    print(fahrenheit)                   # print temperature in the serial window of Mu Editor
     print(sensor_temp)
-    print((fahrenheit, sensor_temp))    # plot temperature in serial window of Mu Editor
+    print((fahrenheit, sensor_temp))    # plot temperature in the plotter window of Mu Editor
     time.sleep(4)
