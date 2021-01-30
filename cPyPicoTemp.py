@@ -1,4 +1,4 @@
-# This script uses the RPi Pico's Analog to Digital Convertor to print & plot on board temperature data
+# This script uses the RPi Pico's Analog to Digital Converter to print & plot on board temperature data
 
 # Electronics concepts used in the script
 
