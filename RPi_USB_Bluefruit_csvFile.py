@@ -2,19 +2,17 @@
 # saves sensor data to a csv file
 
 import serial
+import datetime
 
 CSVfileName = "BerryOneData.csv"
-dataLine = 0
-dataLinesSampled = 10
 
 ser = serial.Serial('/dev/ttyACM0', 9600)
 
-#while dataLine <= dataLinesSampled:
 while True:
   getArduinoData = str(ser.readline())
-  print(getArduinoData)
+  getCurrent_time = str(datetime.datetime.now())
+  print(getArduinoData, getCurrent_time)
   file = open(CSVfileName, "a")
-  file.write(getArduinoData + "\\n")
-  #dataLine = dataLine + 1
+  file.write(getArduinoData + getCurrent_time + "\n")
   
 file.close()  
