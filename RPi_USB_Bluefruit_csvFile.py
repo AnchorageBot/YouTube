@@ -6,10 +6,10 @@ import datetime
 
 CSVfileName = "BerryOneData.csv"
 
-ser = serial.Serial('/dev/ttyACM0', 9600)
+openCommoLine = serial.Serial('/dev/ttyACM0', 9600)
 
 while True:
-  getArduinoData = str(ser.readline())
+  getArduinoData = str(openCommoLine.readline())
   getCurrent_time = str(datetime.datetime.now())
   print(getArduinoData, getCurrent_time)
   file = open(CSVfileName, "a")
