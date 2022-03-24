@@ -18,7 +18,7 @@ This Github is a code repository for how-to YouTube videos focused upon Robots, 
 
 [Mu](https://codewith.mu)
 
-[Thonny](https://thonny.org}
+[Thonny](https://thonny.org)
 
 ## Single Board Computer and Microcontroller Suppliers
 
@@ -32,7 +32,7 @@ This Github is a code repository for how-to YouTube videos focused upon Robots, 
 
 [Raspberry Pi](https://www.raspberrypi.org)
 
-[Dr. John Gallaugher's](https://gallaugher.com)tutorials
+[Dr. John Gallaugher's tutorials](https://gallaugher.com)
 
 [Dr. Chuck's Python for Everbody](https://www.py4e.com)
 
