@@ -12,7 +12,7 @@ This Github is a code repository for how-to YouTube videos focused upon Robots, 
 
 [Link](https://github.com/AnchorageBot/YouTube/blob/master/pinoutBlueFeather32copy.png) for a photo of the Adafruit Feather 32u4 Bluefruit Pinouts
 
-## Text Editors & Integrated Develpment Environments
+## Text Editors & Integrated Development Environments
 
 [Atom](https://atom.io)
 
