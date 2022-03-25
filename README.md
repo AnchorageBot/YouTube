@@ -28,7 +28,7 @@ This Github is a code repository for how-to YouTube videos focused upon Robots, 
 
 [Pimoroni](https://shop.pimoroni.com)
 
-## Knowledge
+## Creators of Knowledge
 
 [Raspberry Pi](https://www.raspberrypi.org)
 
