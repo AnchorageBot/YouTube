@@ -30,6 +30,8 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 [Pimoroni Tiny - CircuitPython Downloads](https://circuitpython.org/board/pimoroni_tiny2040/)
 
+[Pimoroni Tiny - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutTiny.png)
+
 [PySerial - Read the Docs](https://pyserial.readthedocs.io/en/latest/)
 
 [Raspberry Pi Pico - CircuitPython Downloads](https://circuitpython.org/board/raspberry_pi_pico/)
