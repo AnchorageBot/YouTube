@@ -24,13 +24,15 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 [Adafruit Feather Bluefruit Sense - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutFeatherSense.pdf)
 
+[Arduino Nano 33 BLE Sense - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNano33bleSense%20copy.jpg)
+
+[Arduino Portenta H7 - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPortentaH7.pdf)
+
 [Pimoroni Tiny - CircuitPython Downloads](https://circuitpython.org/board/pimoroni_tiny2040/)
 
 [PySerial - Read the Docs](https://pyserial.readthedocs.io/en/latest/)
 
-[Arduino Nano 33 BLE Sense - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNano33bleSense%20copy.jpg)
-
-[Arduino Portenta H7 - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPortentaH7.pdf)
+[Raspberry Pi Pico - CircuitPython Downloads](https://circuitpython.org/board/raspberry_pi_pico/)
 
 ## Single Board Computer References
 
