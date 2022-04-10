@@ -36,6 +36,8 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 ## Single Board Computer References
 
+[Google Coral](https://coral.ai)
+
 [NVIDIA Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit)
 
 [Raspberry Pi](https://www.raspberrypi.org)
