@@ -8,15 +8,15 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 [Adafruit CircuitPython API - Read the Docs](https://docs.circuitpython.org/en/latest/docs/index.html)
 
-[Adafruit Feather Bluefruit Sense Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutFeatherSense.pdf)
-
 [Adafruit Feather Bluefruit Sense CircuitPython Downloads](https://circuitpython.org/board/feather_bluefruit_sense/)
 
-[Adafruit Circuit Playground Bluefruit Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCPB.pdf)
+[Adafruit Feather Bluefruit Sense Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutFeatherSense.pdf)
+
+[Adafruit Circuit Playground Bluefruit - Read the Docs](https://docs.circuitpython.org/projects/circuitplayground/en/5.0.5/index.html)
 
 [Adafruit Circuit Playground Bluefruit CircuitPython Downloads](https://circuitpython.org/board/circuitplayground_bluefruit/)
 
-[Adafruit Circuit Playground Bluefruit - Read the Docs](https://docs.circuitpython.org/projects/circuitplayground/en/5.0.5/index.html)
+[Adafruit Circuit Playground Bluefruit Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCPB.pdf)
 
 [PySerial - Read the Docs](https://pyserial.readthedocs.io/en/latest/)
 
