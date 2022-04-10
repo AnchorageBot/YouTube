@@ -12,7 +12,7 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 [Adafruit Circuit Playground Bluefruit Docs](https://docs.circuitpython.org/projects/circuitplayground/en/5.0.5/index.html)
 
-[Adafruit CircuitPython API Read the docs(https://docs.circuitpython.org/en/latest/docs/index.html)
+[Adafruit CircuitPython API Read the docs](https://docs.circuitpython.org/en/latest/docs/index.html)
 
 [Arduino Nano 33 BLE Sense Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNano33bleSense%20copy.jpg)
 
