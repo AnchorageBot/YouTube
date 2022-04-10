@@ -4,7 +4,7 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 ## Microcontroller References
 
-[Adafruit Feather 32u4 Bluefruit Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutBlueFeather32copy.png)
+[Adafruit Feather 32u4 Bluefruit - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutBlueFeather32copy.png)
 
 [Adafruit CircuitPython API - Read the Docs](https://docs.circuitpython.org/en/latest/docs/index.html)
 
