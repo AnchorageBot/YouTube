@@ -2,17 +2,21 @@
 
 This Github is a code repository for [how-to YouTube videos](https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg) focused upon Robots, TinyML, & IoT
 
-## Microcontroller Pinouts & Docs
+## Microcontroller Docs, Downloads, & Pinouts
 
 [Adafruit Feather 32u4 Bluefruit Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutBlueFeather32copy.png)
 
-[Adafruit Feather Sense Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutFeatherSense.pdf)
+[Adafruit CircuitPython API - Read the Docs](https://docs.circuitpython.org/en/latest/docs/index.html)
+
+[Adafruit Feather Bluefruit Sense Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutFeatherSense.pdf)
+
+[Adafruit Feather Bluefruit Sense CircuitPython Downloads](https://circuitpython.org/board/feather_bluefruit_sense/)
 
 [Adafruit Circuit Playground Bluefruit Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCPB.pdf)
 
-[Adafruit Circuit Playground Bluefruit - Read the Docs](https://docs.circuitpython.org/projects/circuitplayground/en/5.0.5/index.html)
+[Adafruit Circuit Playground Bluefruit CircuitPython Downloads](https://circuitpython.org/board/circuitplayground_bluefruit/)
 
-[Adafruit CircuitPython API - Read the Docs](https://docs.circuitpython.org/en/latest/docs/index.html)
+[Adafruit Circuit Playground Bluefruit - Read the Docs](https://docs.circuitpython.org/projects/circuitplayground/en/5.0.5/index.html)
 
 [PySerial - Read the Docs](https://pyserial.readthedocs.io/en/latest/)
 
