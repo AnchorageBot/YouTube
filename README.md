@@ -1,16 +1,22 @@
 ## YouTube
 
-This Github is a code repository for how-to YouTube videos focused upon Robots, TinyML, & IoT
+This Github is a code repository for [how-to YouTube videos](https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg) focused upon Robots, TinyML, & IoT
 
-## Useful links
+## Microcontroller Pinouts & Docs
 
-[Link](https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg) for YouTube videos to accompany this Github
+[Adafruit Feather 32u4 Bluefruit Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutBlueFeather32copy.png)
 
-[Link](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNano33bleSense%20copy.jpg) for a photo of the Arduino Nano 33 BLE Sense Pinouts
+[Adafruit Feather Sense Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutFeatherSense.pdf)
 
-[Link](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPortentaH7.pdf) for a photo of the Arduino Portenta H7 Pinouts
+[Adafruit Circuit Playground Bluefruit Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCPB.pdf)
 
-[Link](https://github.com/AnchorageBot/YouTube/blob/master/pinoutBlueFeather32copy.png) for a photo of the Adafruit Feather 32u4 Bluefruit Pinouts
+[Adafruit Circuit Playground Bluefruit Docs](https://docs.circuitpython.org/projects/circuitplayground/en/5.0.5/index.html)
+
+[Adafruit CircuitPython API Read the docs(https://docs.circuitpython.org/en/latest/docs/index.html)
+
+[Arduino Nano 33 BLE Sense Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNano33bleSense%20copy.jpg)
+
+[Arduino Portenta H7 Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPortentaH7.pdf)
 
 ## Text Editors & Integrated Development Environments
 
