@@ -14,6 +14,8 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 [Adafruit CircuitPython API - Read the Docs](https://docs.circuitpython.org/en/latest/docs/index.html)
 
+[PySerial - Read the Docs](https://pyserial.readthedocs.io/en/latest/)
+
 [Arduino Nano 33 BLE Sense Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNano33bleSense%20copy.jpg)
 
 [Arduino Portenta H7 Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPortentaH7.pdf)
