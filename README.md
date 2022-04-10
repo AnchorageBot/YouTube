@@ -36,6 +36,8 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 [Raspberry Pi Pico - CircuitPython Downloads](https://circuitpython.org/board/raspberry_pi_pico/)
 
+[Raspberry Pi Pico - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPico.pdf)
+
 ## Single Board Computer References
 
 [Google Coral](https://coral.ai)
