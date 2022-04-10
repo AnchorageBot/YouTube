@@ -36,7 +36,7 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 [Thonny](https://thonny.org)
 
-## Single Board Computer and Microcontroller Suppliers
+## Microcontroller and Single Board Computer Suppliers
 
 [Adafruit](https://www.adafruit.com)
 
