@@ -24,6 +24,10 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 [Arduino Portenta H7 Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPortentaH7.pdf)
 
+## Single Board Computer References
+
+[Raspberry Pi](https://www.raspberrypi.org)
+
 ## Text Editors & Integrated Development Environments
 
 [Atom](https://atom.io)
@@ -41,8 +45,6 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 [Pimoroni](https://shop.pimoroni.com)
 
 ## Creators of Knowledge
-
-[Raspberry Pi](https://www.raspberrypi.org)
 
 [Dr. John Gallaugher's tutorials](https://gallaugher.com)
 
