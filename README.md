@@ -18,7 +18,7 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 [Adafruit CLUE - CircuitPython Downloads](https://circuitpython.org/board/clue_nrf52840_express/)
 
-[Adafruit CLUE - Pinouts(https://github.com/AnchorageBot/YouTube/blob/master/pinoutCLUE.pdf)
+[Adafruit CLUE - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCLUE.pdf)
 
 [Adafruit Feather Bluefruit Sense - CircuitPython Downloads](https://circuitpython.org/board/feather_bluefruit_sense/)
 
