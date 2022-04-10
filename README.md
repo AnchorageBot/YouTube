@@ -2,7 +2,7 @@
 
 This Github is a code repository for [how-to YouTube videos](https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg) focused upon Robots, TinyML, & IoT
 
-## Microcontroller Docs, Downloads, & Pinouts
+## Microcontroller References
 
 [Adafruit Feather 32u4 Bluefruit Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutBlueFeather32copy.png)
 
