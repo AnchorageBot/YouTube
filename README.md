@@ -30,6 +30,8 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 [Microbit - BBC](https://microbit.org)
 
+[Microbit - Read the Docs](https://microbit-micropython.readthedocs.io/en/latest/index.html)
+
 [Micorbit V2 - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutMicrobitV2.pdf)
 
 [Pimoroni Tiny - CircuitPython Downloads](https://circuitpython.org/board/pimoroni_tiny2040/)
