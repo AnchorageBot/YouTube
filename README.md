@@ -28,6 +28,10 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 [Arduino Portenta H7 - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPortentaH7.pdf)
 
+[Microbit - BBC](https://microbit.org)
+
+[Micorbit V2 - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutMicrobitV2.pdf)
+
 [Pimoroni Tiny - CircuitPython Downloads](https://circuitpython.org/board/pimoroni_tiny2040/)
 
 [Pimoroni Tiny - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutTiny.png)
