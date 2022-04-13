@@ -24,7 +24,9 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 [Adafruit Feather Bluefruit Sense - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutFeatherSense.pdf)
 
-[Arduino Nano 33 BLE Sense - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNano33bleSense%20copy.jpg)
+[Arduino Nano 33 BLE Sense - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNANO33sense.pdf)
+
+[Arduino Nano 33 IoT - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNANO33IoT.pdf)
 
 [Arduino Portenta H7 - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPortentaH7.pdf)
 
