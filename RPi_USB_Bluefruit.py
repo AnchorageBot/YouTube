@@ -1,5 +1,6 @@
-# This code will provide serial communication between a RPi and a Bluefruit Sense without the Arduino IDE
-# This code is loaded on the RPi while Bluefruit_USB_RPi.ino is loaded on the Bluefruit
+# This code will provide serial communication between a RPi and a Bluefruit Sense
+# This code is loaded on the RPi while this script is loaded on the Bluefruit Sense
+    # https://github.com/AnchorageBot/YouTube/blob/master/FBS_USB_RPi.ino
 
 # Software and materials list
     # Programming the RPi, 2nd Ed, by Simon Monk http://simonmonk.org/programming-raspberry-pi-ed2/
