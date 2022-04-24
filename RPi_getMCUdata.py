@@ -3,6 +3,8 @@
   
 # RPi Zero hardware kit
   # https://www.adafruit.com/product/3410
+    
+# IDE: Mu version 1.0.3, https://codewith.mu
   
 # Source code references
   # https://docs.python.org/3/index.html
