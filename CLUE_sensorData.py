@@ -24,8 +24,8 @@
     # adafruit_slideshow.mpy
     # neopixel.mpy
 
-# URL for RPi_GetCLUEdata.py script file to save CLUE sensor data to a RPi
-    # Run the RPi_GetCLUEdata.py script on the RPi using the Mu IDE
+# URL for RPi_GetMCUdata.py script file to save CLUE sensor data to a RPi
+    # Run the RPi_GetMCUdata.py script on the RPi using the Mu IDE
     # https://github.com/AnchorageBot/YouTube/blob/master/RPi_getMCUdata.py
 
 from adafruit_clue import clue
