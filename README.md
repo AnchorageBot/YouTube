@@ -52,6 +52,8 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 [Google Coral](https://coral.ai)
 
+[Google Coral GPIO/Pinout](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCoral.jpeg)
+
 [NVIDIA Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit)
 
 [Raspberry Pi](https://www.raspberrypi.org)
