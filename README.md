@@ -60,6 +60,8 @@ This Github is a code repository for [how-to YouTube videos](https://www.youtube
 
 ## Text Editors & Integrated Development Environments
 
+[Arduino](https://www.arduino.cc/en/software)
+
 [Atom](https://atom.io)
 
 [Mu](https://codewith.mu)
