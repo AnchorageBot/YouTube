@@ -1,6 +1,6 @@
 ## YouTube
 
-This Github is a code repository for [how-to YouTube videos](https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg) focused upon Robots, TinyML, & IoT
+Code/script repository for [how-to YouTube videos](https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg) which use Single Board Computers (SBCs) and Microcontrollers (MCUs)
 
 ## Microcontroller References
 
