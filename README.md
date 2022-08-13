@@ -48,13 +48,13 @@ Read the Docs
   
 Reference Books
 
-  [Getting Started with Adafruit Circuit Playground Express]
+  [Getting Started with Adafruit Circuit Playground Express](https://www.adafruit.com/product/3944)
   
-  [Programming the Arduino]
+  [Programming the Arduino](https://www.adafruit.com/product/1019)
   
   [Programming the BBC Microbit]
   
-  [Programming the Pico]
+  [Programming the Pico](https://www.adafruit.com/product/5320)
 
 ## Single Board Computer References
 
