@@ -10,7 +10,7 @@ Apps and APIs
   
   [Adafruit CircuitPython API](https://docs.circuitpython.org/en/latest/docs/index.html)
 
-Microbit References
+Microbit Websites
 
   [Microbit - BBC](https://microbit.org)
 
@@ -45,6 +45,16 @@ Read the Docs
   [Microbit](https://microbit-micropython.readthedocs.io/en/latest/index.html)
 
   [PySerial](https://pyserial.readthedocs.io/en/latest/)
+  
+Reference Books
+
+  [Getting Started with Adafruit Circuit Playground Express]
+  
+  [Programming the Arduino]
+  
+  [Programming the BBC Microbit]
+  
+  [Programming the Pico]
 
 ## Single Board Computer References
 
