@@ -18,25 +18,25 @@ Microbit References
 
 Pinouts
 
-    [Adafruit Circuit Playground Bluefruit](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCPB.pdf)
+   [Adafruit Circuit Playground Bluefruit](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCPB.pdf)
 
-  [Adafruit CLUE - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCLUE.pdf)
+   [Adafruit CLUE](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCLUE.pdf)
 
-  [Adafruit Feather Bluefruit Sense - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutFeatherSense.pdf)
+   [Adafruit Feather Bluefruit Sense](https://github.com/AnchorageBot/YouTube/blob/master/pinoutFeatherSense.pdf)
 
-  [Adafruit Feather 32u4 Bluefruit - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutBlueFeather32copy.png)
+   [Adafruit Feather 32u4 Bluefruit](https://github.com/AnchorageBot/YouTube/blob/master/pinoutBlueFeather32copy.png)
 
-  [Arduino Nano 33 BLE Sense - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNANO33sense.pdf)
+   [Arduino Nano 33 BLE Sense](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNANO33sense.pdf)
 
-  [Arduino Nano 33 IoT - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNANO33IoT.pdf)
+   [Arduino Nano 33 IoT](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNANO33IoT.pdf)
 
-  [Arduino Portenta H7 - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPortentaH7.pdf)
+   [Arduino Portenta H7](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPortentaH7.pdf)
   
-  [Microbit V2 - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutMicrobitV2.pdf)
+   [Microbit V2](https://github.com/AnchorageBot/YouTube/blob/master/pinoutMicrobitV2.pdf)
 
-  [Pimoroni Tiny - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutTiny.png)
+   [Pimoroni Tiny](https://github.com/AnchorageBot/YouTube/blob/master/pinoutTiny.png)
   
-  [Raspberry Pi Pico - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPico.pdf)
+   [Raspberry Pi Pico](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPico.pdf)
 
 Read the Docs
 
