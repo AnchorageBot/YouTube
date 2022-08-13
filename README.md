@@ -48,7 +48,7 @@ Read the Docs
 
   [PySerial](https://pyserial.readthedocs.io/en/latest/)
   
-Reference Books
+Reference Books and Tutorials
 
   [Getting Started with Adafruit Circuit Playground Express](https://www.adafruit.com/product/3944)
   
@@ -57,6 +57,8 @@ Reference Books
   [Programming the BBC Microbit](http://simonmonk.org/prog-mb/)
   
   [Programming the Pico](https://www.adafruit.com/product/5320)
+  
+  [Using the USB Logic Analyzer with sigrok PulseView](https://learn.sparkfun.com/tutorials/using-the-usb-logic-analyzer-with-sigrok-pulseview)
 
 ## Single Board Computer References
 
