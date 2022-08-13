@@ -6,8 +6,6 @@ Code/script repository for [how-to YouTube videos](https://www.youtube.com/chann
 
 [Adafruit Bluefruit LE App for Microcontrollers, Cellphones, & Tablets](https://learn.adafruit.com/bluefruit-le-connect)
 
-[Adafruit Feather 32u4 Bluefruit - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutBlueFeather32copy.png)
-
 [Adafruit CircuitPython API - Read the Docs](https://docs.circuitpython.org/en/latest/docs/index.html)
 
 [Adafruit Circuit Playground Bluefruit - Read the Docs](https://docs.circuitpython.org/projects/circuitplayground/en/5.0.5/index.html)
@@ -17,6 +15,8 @@ Code/script repository for [how-to YouTube videos](https://www.youtube.com/chann
 [Adafruit CLUE - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCLUE.pdf)
 
 [Adafruit Feather Bluefruit Sense - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutFeatherSense.pdf)
+
+[Adafruit Feather 32u4 Bluefruit - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutBlueFeather32copy.png)
 
 [Arduino Nano 33 BLE Sense - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNANO33sense.pdf)
 
