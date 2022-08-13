@@ -4,7 +4,7 @@ Code/script repository for [how-to YouTube videos](https://www.youtube.com/chann
 
 ## Microcontroller References
 
-### Apps
+Apps
 
   [Adafruit Bluefruit LE App for Microcontrollers, Cellphones, & Tablets](https://learn.adafruit.com/bluefruit-le-connect)
 
