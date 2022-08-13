@@ -8,7 +8,7 @@ Apps and APIs
 
   [Adafruit Bluefruit LE App for Microcontrollers, Cellphones, & Tablets](https://learn.adafruit.com/bluefruit-le-connect)
   
-  [Adafruit CircuitPython API - Read the Docs](https://docs.circuitpython.org/en/latest/docs/index.html)
+  [Adafruit CircuitPython API](https://docs.circuitpython.org/en/latest/docs/index.html)
 
 Microbit References
 
@@ -18,7 +18,7 @@ Microbit References
 
 Pinouts
 
-  [Adafruit Circuit Playground Bluefruit - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCPB.pdf)
+  *[Adafruit Circuit Playground Bluefruit - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCPB.pdf)
 
   [Adafruit CLUE - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCLUE.pdf)
 
@@ -42,9 +42,9 @@ Read the Docs
 
   [Adafruit Circuit Playground Bluefruit](https://docs.circuitpython.org/projects/circuitplayground/en/5.0.5/index.html)
 
-  [Microbit - Read the Docs](https://microbit-micropython.readthedocs.io/en/latest/index.html)
+  [Microbit](https://microbit-micropython.readthedocs.io/en/latest/index.html)
 
-  [PySerial - Read the Docs](https://pyserial.readthedocs.io/en/latest/)
+  [PySerial](https://pyserial.readthedocs.io/en/latest/)
 
 ## Single Board Computer References
 
