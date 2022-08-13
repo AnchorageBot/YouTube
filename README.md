@@ -12,15 +12,9 @@ Code/script repository for [how-to YouTube videos](https://www.youtube.com/chann
 
 [Adafruit Circuit Playground Bluefruit - Read the Docs](https://docs.circuitpython.org/projects/circuitplayground/en/5.0.5/index.html)
 
-[Adafruit Circuit Playground Bluefruit - CircuitPython Downloads](https://circuitpython.org/board/circuitplayground_bluefruit/)
-
 [Adafruit Circuit Playground Bluefruit - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCPB.pdf)
 
-[Adafruit CLUE - CircuitPython Downloads](https://circuitpython.org/board/clue_nrf52840_express/)
-
 [Adafruit CLUE - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCLUE.pdf)
-
-[Adafruit Feather Bluefruit Sense - CircuitPython Downloads](https://circuitpython.org/board/feather_bluefruit_sense/)
 
 [Adafruit Feather Bluefruit Sense - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutFeatherSense.pdf)
 
@@ -38,13 +32,9 @@ Code/script repository for [how-to YouTube videos](https://www.youtube.com/chann
 
 [Microbit V2 - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutMicrobitV2.pdf)
 
-[Pimoroni Tiny - CircuitPython Downloads](https://circuitpython.org/board/pimoroni_tiny2040/)
-
 [Pimoroni Tiny - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutTiny.png)
 
 [PySerial - Read the Docs](https://pyserial.readthedocs.io/en/latest/)
-
-[Raspberry Pi Pico - CircuitPython Downloads](https://circuitpython.org/board/raspberry_pi_pico/)
 
 [Raspberry Pi Pico - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPico.pdf)
 
