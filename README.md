@@ -4,39 +4,47 @@ Code/script repository for [how-to YouTube videos](https://www.youtube.com/chann
 
 ## Microcontroller References
 
-[Adafruit Bluefruit LE App for Microcontrollers, Cellphones, & Tablets](https://learn.adafruit.com/bluefruit-le-connect)
+[Apps and APIs]
 
-[Adafruit CircuitPython API - Read the Docs](https://docs.circuitpython.org/en/latest/docs/index.html)
+  [Adafruit Bluefruit LE App for Microcontrollers, Cellphones, & Tablets](https://learn.adafruit.com/bluefruit-le-connect)
+  
+  [Adafruit CircuitPython API - Read the Docs](https://docs.circuitpython.org/en/latest/docs/index.html)
 
-[Adafruit Circuit Playground Bluefruit - Read the Docs](https://docs.circuitpython.org/projects/circuitplayground/en/5.0.5/index.html)
+[Microbit References]
 
-[Adafruit Circuit Playground Bluefruit - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCPB.pdf)
+  [Microbit - BBC](https://microbit.org)
 
-[Adafruit CLUE - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCLUE.pdf)
+  [Microbit - Microsoft](https://makecode.microbit.org)
 
-[Adafruit Feather Bluefruit Sense - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutFeatherSense.pdf)
+[Pinouts]
 
-[Adafruit Feather 32u4 Bluefruit - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutBlueFeather32copy.png)
+  [Adafruit Circuit Playground Bluefruit - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCPB.pdf)
 
-[Arduino Nano 33 BLE Sense - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNANO33sense.pdf)
+  [Adafruit CLUE - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCLUE.pdf)
 
-[Arduino Nano 33 IoT - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNANO33IoT.pdf)
+  [Adafruit Feather Bluefruit Sense - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutFeatherSense.pdf)
 
-[Arduino Portenta H7 - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPortentaH7.pdf)
+  [Adafruit Feather 32u4 Bluefruit - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutBlueFeather32copy.png)
 
-[Microbit - BBC](https://microbit.org)
+  [Arduino Nano 33 BLE Sense - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNANO33sense.pdf)
 
-[Microbit - Microsoft](https://makecode.microbit.org)
+  [Arduino Nano 33 IoT - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutNANO33IoT.pdf)
 
-[Microbit - Read the Docs](https://microbit-micropython.readthedocs.io/en/latest/index.html)
+  [Arduino Portenta H7 - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPortentaH7.pdf)
+  
+  [Microbit V2 - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutMicrobitV2.pdf)
 
-[Microbit V2 - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutMicrobitV2.pdf)
+  [Pimoroni Tiny - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutTiny.png)
+  
+  [Raspberry Pi Pico - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPico.pdf)
 
-[Pimoroni Tiny - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutTiny.png)
+[Read the Docs]
 
-[PySerial - Read the Docs](https://pyserial.readthedocs.io/en/latest/)
+  [Adafruit Circuit Playground Bluefruit](https://docs.circuitpython.org/projects/circuitplayground/en/5.0.5/index.html)
 
-[Raspberry Pi Pico - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPico.pdf)
+  [Microbit - Read the Docs](https://microbit-micropython.readthedocs.io/en/latest/index.html)
+
+  [PySerial - Read the Docs](https://pyserial.readthedocs.io/en/latest/)
 
 ## Single Board Computer References
 
