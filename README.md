@@ -48,6 +48,8 @@ Read the Docs
 
   [PySerial](https://pyserial.readthedocs.io/en/latest/)
   
+  [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)
+  
 Reference Books and Tutorials
 
   [Getting Started with Adafruit Circuit Playground Express](https://www.adafruit.com/product/3944)
