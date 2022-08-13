@@ -18,7 +18,7 @@ Microbit References
 
 Pinouts
 
-  *[Adafruit Circuit Playground Bluefruit - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCPB.pdf)
+  **[Adafruit Circuit Playground Bluefruit](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCPB.pdf)
 
   [Adafruit CLUE - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCLUE.pdf)
 
