@@ -88,6 +88,8 @@ Reference Books and Tutorials
 
 [Pimoroni](https://shop.pimoroni.com)
 
+[Sparkfun](https://sparkfun.com)
+
 ## Creators of Knowledge
 
 [Dr. John Gallaugher's tutorials](https://gallaugher.com)
