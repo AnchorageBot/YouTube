@@ -52,7 +52,7 @@ Reference Books
   
   [Programming the Arduino](https://www.adafruit.com/product/1019)
   
-  [Programming the BBC Microbit]
+  [Programming the BBC Microbit](http://simonmonk.org/prog-mb/)
   
   [Programming the Pico](https://www.adafruit.com/product/5320)
 
