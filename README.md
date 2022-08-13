@@ -4,19 +4,19 @@ Code/script repository for [how-to YouTube videos](https://www.youtube.com/chann
 
 ## Microcontroller References
 
-[Apps and APIs]
+Apps and APIs
 
   [Adafruit Bluefruit LE App for Microcontrollers, Cellphones, & Tablets](https://learn.adafruit.com/bluefruit-le-connect)
   
   [Adafruit CircuitPython API - Read the Docs](https://docs.circuitpython.org/en/latest/docs/index.html)
 
-[Microbit References]
+Microbit References
 
   [Microbit - BBC](https://microbit.org)
 
   [Microbit - Microsoft](https://makecode.microbit.org)
 
-[Pinouts]
+Pinouts
 
   [Adafruit Circuit Playground Bluefruit - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCPB.pdf)
 
@@ -38,7 +38,7 @@ Code/script repository for [how-to YouTube videos](https://www.youtube.com/chann
   
   [Raspberry Pi Pico - Pinouts](https://github.com/AnchorageBot/YouTube/blob/master/pinoutPico.pdf)
 
-[Read the Docs]
+Read the Docs
 
   [Adafruit Circuit Playground Bluefruit](https://docs.circuitpython.org/projects/circuitplayground/en/5.0.5/index.html)
 
