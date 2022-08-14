@@ -43,6 +43,8 @@ Read the Docs
   [Adafruit Circuit Playground Bluefruit](https://docs.circuitpython.org/projects/circuitplayground/en/5.0.5/index.html)
   
   [Adafruit CLUE](https://docs.circuitpython.org/projects/clue/en/latest/)
+  
+  [Linux Bluetooth](http://www.bluez.org)
 
   [Microbit](https://microbit-micropython.readthedocs.io/en/latest/index.html)
   
