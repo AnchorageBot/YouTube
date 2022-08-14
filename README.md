@@ -44,7 +44,9 @@ Read the Docs
   
   [Adafruit CLUE](https://docs.circuitpython.org/projects/clue/en/latest/)
   
-  [Linux Bluetooth](http://www.bluez.org)
+  [Bluetooth for Linux](http://www.bluez.org)
+  
+  [Bluetooth for Python](https://pybluez.readthedocs.io/en/latest/index.html)
 
   [Microbit](https://microbit-micropython.readthedocs.io/en/latest/index.html)
   
