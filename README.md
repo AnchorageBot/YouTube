@@ -64,6 +64,8 @@ Reference Books and Tutorials
   
   [Programming the BBC Microbit](http://simonmonk.org/prog-mb/)
   
+  [Programming the Raspberry Pi](http://simonmonk.org/programming-raspberry-pi-ed2/)
+  
   [Programming the Pico](https://www.adafruit.com/product/5320)
   
   [Using the USB Logic Analyzer with sigrok PulseView](https://learn.sparkfun.com/tutorials/using-the-usb-logic-analyzer-with-sigrok-pulseview)
