@@ -104,6 +104,8 @@ Reference Books and Tutorials
 
 ## Creators of Knowledge
 
+[Dr. Ian Davis's Coursera IoT Specialization](https://www.coursera.org/specializations/iot)
+
 [Dr. John Gallaugher's tutorials](https://gallaugher.com)
 
 [Dr. Chuck's Python for Everbody](https://www.py4e.com)
