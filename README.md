@@ -60,6 +60,8 @@ Reference Books and Tutorials
 
   [Getting Started with Adafruit Circuit Playground Express](https://www.adafruit.com/product/3944)
   
+  - [Make it Log](https://learn.adafruit.com/make-it-data-log-spreadsheet-circuit-playground/overview)
+  
   [Programming the Arduino](https://www.adafruit.com/product/1019)
   
   [Programming the BBC Microbit](http://simonmonk.org/prog-mb/)
