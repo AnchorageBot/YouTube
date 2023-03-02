@@ -1,0 +1,25 @@
+Microbit Bluetooth Development Resources
+
+Microbit v2 Hardware (uses the NRF52833 processor)
+Pimoroni Stock # MBIT0007
+https://shop.pimoroni.com
+
+Raspberry Pi and Microbit programming
+https://projects.raspberrypi.org/en/projects/getting-started-with-microbit
+
+Pimoroni Microbit Temperature Logger Project
+https://edu.pimoroni.com/is-it-cold-out-there/
+
+Pimoroni Microbit Datalogger Project
+https://edu.pimoroni.com/datalogging-from-the-enviro-bit/
+
+Microbit Org Datalogger Project
+https://microbit.org/get-started/user-guide/data-logging/
+
+Programming the BBC Microbit by Simon Monk
+http://simonmonk.org/prog-mb/
+
+Bluetooth Technology for Linux Developers Study Guide
+Bluetooth SIG and Martin Wooley
+Includes sample bluetooth code for Microbit and Raspberry Pi
+https://www.bluetooth.com/blog/the-bluetooth-for-linux-developers-study-guide/
