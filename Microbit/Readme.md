@@ -4,7 +4,7 @@
 
 [Microbit V1.3 Pinout](https://github.com/AnchorageBot/YouTube/blob/e438f1afee2ebfa9f09bb2a127f89fb9f4e91c6a/Microbit/pinoutMicrobitV1.3.pdf)
 
-[Microbit V1.5 Pinout]
+[Microbit V1.5 Pinout](https://github.com/AnchorageBot/YouTube/blob/82d03f7a4ca790bcc5596abe54af85cc63a2f025/Microbit/pinoutMicrobitV1.5.pdf)
 
 [Microbit V2 Pinout](https://github.com/AnchorageBot/YouTube/blob/94062baf739e67855cf781cc0712d97ee588201b/Microbit/pinoutMicrobitV2.pdf)
 
