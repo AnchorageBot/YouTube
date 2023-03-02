@@ -8,6 +8,8 @@
 
 [Microbit V2 Pinout](https://github.com/AnchorageBot/YouTube/blob/94062baf739e67855cf781cc0712d97ee588201b/Microbit/pinoutMicrobitV2.pdf)
 
+[Microsoft MakeCode for Microbit](https://makecode.microbit.org)
+
 [Programming the BBC Microbit - Simon Monk](http://simonmonk.org/prog-mb/)
 
 [Solar Experimenters Kit for Microbit - Simon Monk](http://www.monkmakes.com/mb_solar.html)
