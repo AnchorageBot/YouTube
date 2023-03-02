@@ -2,7 +2,7 @@
 
 [Microbit.org](https://microbit.org)
 
-[Microbit V1.3 Pinout]
+[Microbit V1.3 Pinout](https://github.com/AnchorageBot/YouTube/blob/e438f1afee2ebfa9f09bb2a127f89fb9f4e91c6a/Microbit/pinoutMicrobitV1.3.pdf)
 
 [Microbit V1.5 Pinout]
 
