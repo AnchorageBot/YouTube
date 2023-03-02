@@ -1,4 +1,4 @@
-## This github repository contains references and scritps for the BBC Microbit
+## This github repository contains references and scripts for the BBC Microbit
 
 [Microbit.org](https://microbit.org)
 
