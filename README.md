@@ -76,7 +76,7 @@ Reference Books and Tutorials
 
 [Dr. Ian Davis' Coursera IoT Specialization](https://www.coursera.org/specializations/iot)
 
-[Dr. John Gallaugher's tutorials](https://gallaugher.com)
+[Dr. John Gallaugher's Tutorials](https://gallaugher.com)
 
 [Dr. Chuck's Python for Everbody](https://www.py4e.com)
 
