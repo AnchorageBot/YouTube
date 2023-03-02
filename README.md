@@ -8,12 +8,6 @@ Apps
 
   [Adafruit Bluefruit LE App for Microcontrollers, Cellphones, & Tablets](https://learn.adafruit.com/bluefruit-le-connect)
 
-Microbit Websites
-
-  [Microbit - BBC](https://microbit.org)
-
-  [Microbit - Microsoft](https://makecode.microbit.org)
-
 Pinouts
 
    [Adafruit Circuit Playground Bluefruit](https://github.com/AnchorageBot/YouTube/blob/master/pinoutCPB.pdf)
@@ -47,8 +41,6 @@ Read the Docs
   [Bluetooth for Linux](http://www.bluez.org)
   
   [Bluetooth for Python](https://pybluez.readthedocs.io/en/latest/index.html)
-
-  [Microbit](https://microbit-micropython.readthedocs.io/en/latest/index.html)
   
   [MicroPython](https://docs.micropython.org/en/latest/)
 
