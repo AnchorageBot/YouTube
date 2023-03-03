@@ -11,8 +11,6 @@ Apps
 Read the Docs
 
   [Adafruit CircuitPython](https://docs.circuitpython.org/en/latest/docs/index.html)
-
-  [Adafruit Circuit Playground Bluefruit](https://docs.circuitpython.org/projects/circuitplayground/en/5.0.5/index.html)
   
   [Adafruit CLUE](https://docs.circuitpython.org/projects/clue/en/latest/)
   
