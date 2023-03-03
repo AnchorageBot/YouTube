@@ -12,8 +12,6 @@ Read the Docs
 
   [Adafruit CircuitPython](https://docs.circuitpython.org/en/latest/docs/index.html)
   
-  [Adafruit CLUE](https://docs.circuitpython.org/projects/clue/en/latest/)
-  
   [Bluetooth for Linux](http://www.bluez.org)
   
   [Bluetooth for Python](https://pybluez.readthedocs.io/en/latest/index.html)
@@ -23,6 +21,8 @@ Read the Docs
   [PySerial](https://pyserial.readthedocs.io/en/latest/)
   
   [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)
+  
+  [Read the Docs Home](https://readthedocs.org)
   
 Reference Books and Tutorials
 
