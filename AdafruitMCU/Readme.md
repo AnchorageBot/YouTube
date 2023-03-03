@@ -2,6 +2,8 @@
 
 [Getting Started with Adafruit Circuit Playground Express - Anne Barela](https://www.adafruit.com/product/3944)
 
+[Make it Log - CBD & Android](https://learn.adafruit.com/make-it-data-log-spreadsheet-circuit-playground/overview)
+
 [Pinout - Adafruit CLUE](https://github.com/AnchorageBot/YouTube/blob/44efe598a52ca14748716351d53e139c57ee24c5/AdafruitMCU/pinoutCLUE.pdf)
 
 [Read the Docs - CircuitPython](https://circuitpython-jake.readthedocs.io/en/latest/docs/index.html)
