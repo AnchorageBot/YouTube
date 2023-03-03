@@ -8,6 +8,6 @@
 
 [Read the Docs - CircuitPython](https://circuitpython-jake.readthedocs.io/en/latest/docs/index.html)
 
-[Read the Docs - Circuit Python Bluefruit](https://docs.circuitpython.org/projects/circuitplayground/en/5.3.0/index.html)
+[Read the Docs - Circuit Python Bluefruit (CPB)](https://docs.circuitpython.org/projects/circuitplayground/en/5.3.0/index.html)
 
 [Read the Docs - CLUE](https://docs.circuitpython.org/projects/clue/en/latest/)
