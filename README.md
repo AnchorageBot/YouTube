@@ -31,8 +31,6 @@ Reference Books and Tutorials
   [Programming the Pico](https://www.adafruit.com/product/5320)
   
   [UF2 (USB Flashing Format)](https://github.com/microsoft/uf2)
-  
-  [Using the USB Logic Analyzer with sigrok PulseView](https://learn.sparkfun.com/tutorials/using-the-usb-logic-analyzer-with-sigrok-pulseview)
 
 ## Single Board Computer References
 
