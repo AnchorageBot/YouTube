@@ -2,8 +2,8 @@
 
 A voxel represents a value on a regular grid in three-dimensional space
 
-[TinkerCAD](https://www.tinkercad.com)
-
 [Thingiverse](https://www.thingiverse.com)
+
+[TinkerCAD](https://www.tinkercad.com)
 
 [Voxelab 3D Printers](https://www.voxelab3dp.com)
