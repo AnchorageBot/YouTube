@@ -8,7 +8,7 @@
 
 [Raspberry Pi Cookbook - Simon Monk](http://simonmonk.org/raspberry-pi-cookbook-ed2/)
 
-[Read the Docs - Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)
+[Raspberry Pi Pico Documentation](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)
 
 [Stack Exchange - Raspberry Pi](https://raspberrypi.stackexchange.com)
 
