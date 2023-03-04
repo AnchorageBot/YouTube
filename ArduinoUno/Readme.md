@@ -1,5 +1,7 @@
-## This github repository contains references and scripts for the Arduino Uno
+## This github repository contains references and scripts for the [Arduino](https://www.arduino.cc) Uno
 
 [Programming Arduino, Getting Started with Sketches - Simon Monk](http://simonmonk.org/progardui2ed/)
+
+[StackExchange - Arduino](https://arduino.stackexchange.com)
 
 [TinkerCad - Online Simulator for Circuits and Arduino Uno](https://www.tinkercad.com)
