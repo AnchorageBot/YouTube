@@ -4,4 +4,4 @@
 
 [StackExchange - Arduino](https://arduino.stackexchange.com)
 
-[TinkerCad - Online Simulator for Circuits and Arduino Uno](https://www.tinkercad.com)
+[TinkerCAD - Online Simulator for Circuits and Arduino Uno](https://www.tinkercad.com)
