@@ -1,6 +1,6 @@
 ## YouTube
 
-Code/script repository for [how-to YouTube videos](https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg) which use Single Board Computers (SBCs) and Microcontrollers (MCUs)
+Code/script repository for [how-to YouTube videos](https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg) which use Microcontrollers (MCUs) and Single Board Computers (SBCs)
 
 ## Microcontroller References
 
