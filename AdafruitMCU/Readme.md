@@ -1,4 +1,4 @@
-## This github repository contains references and scripts for [Adafruit](https://www.adafruit.com) Microcontrollers (MCUs)
+## This github repository contains references and scripts for [Adafruit](https://www.adafruit.com) Microcontrollers (MCUs) and sensors
 
 [Bluefruit LE App for Microcontrollers, Cellphones, & Tablets](https://learn.adafruit.com/bluefruit-le-connect)
 
@@ -19,3 +19,5 @@
 [Read the Docs - CLUE](https://docs.circuitpython.org/projects/clue/en/latest/)
 
 [TinkerCAD - Online Simulator for Circuits](https://www.tinkercad.com)
+
+[Using the USB Logic Analyzer with sigrok PulseView](https://learn.sparkfun.com/tutorials/using-the-usb-logic-analyzer-with-sigrok-pulseview)
