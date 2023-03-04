@@ -1,0 +1,53 @@
+# -*- coding: utf-8 -*-
+# Python v 3.42
+#
+# This script will use pulse width modulation (PWM) to blink an LED
+#
+# Materials
+#
+# (1) Raspberry Pi Zero
+# (1) OSEPP Red LED Module with integrated sensor
+# (3) 22 AWG male/female wires
+# (1) Adafruit RPi Pinout reference card
+#
+# Assembly
+#
+# RPi GPIO 5V  -> OSEPP +
+# RPi GPIO GND -> OSEPP -
+# RPi GPIO #18 -> OSEPP S
+# ....or GPIO #12 or GPIO #13 or GPIO #19
+#
+# Engineering
+#
+# https://pypi.org/project/RPi.GPIO/
+# https://docs.python.org/3/library/time.html
+
+# ATS
+# https://github.com/AnchorageBot
+
+# Libraries
+import RPi.GPIO as GPIO
+import time
+
+# global constants and variables
+delay 0.01
+
+# Setup
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO.setup(18, GPIO.OUT)
+pwm = GPIO.PWM(18, 50)
+
+# main
+pwm.start(0)
+try:
+  while 1:
+      for i in range(0, 100):
+          pwm.ChangeDutyCycle(i)
+          time.sleep(delay)
+      for in in range(100, 0, -1):
+          pwm.ChangeDutyCycle(i)
+          time.sleep(delay)
+except KeyboardInterrupt:
+    pwm.stop()
+    GPIO.cleanup()
