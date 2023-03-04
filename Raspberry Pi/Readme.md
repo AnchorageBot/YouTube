@@ -7,3 +7,5 @@
 [Programming the Raspberry Pi - Smon Monk](http://simonmonk.org/programming-raspberry-pi-ed2/)
 
 [Raspberry Pi Cookbook - Simon Monk](http://simonmonk.org/raspberry-pi-cookbook-ed2/)
+
+[Stack Exchange - Raspberry Pi](https://raspberrypi.stackexchange.com)
