@@ -10,6 +10,8 @@
 
 [Pinout - Adafruit CLUE](https://github.com/AnchorageBot/YouTube/blob/44efe598a52ca14748716351d53e139c57ee24c5/AdafruitMCU/pinoutCLUE.pdf)
 
+[Pinout - Adafruit CPB](https://github.com/AnchorageBot/YouTube/blob/0cdb7e2641143c3b7e836746ea82badc6ab4e4c1/AdafruitMCU/pinoutCPB.pdf)
+
 [Read the Docs - CircuitPython](https://circuitpython-jake.readthedocs.io/en/latest/docs/index.html)
 
 [Read the Docs - Circuit Playground Bluefruit (CPB)](https://docs.circuitpython.org/projects/circuitplayground/en/5.3.0/index.html)
