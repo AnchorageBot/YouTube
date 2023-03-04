@@ -16,8 +16,6 @@ Read the Docs
 
   [PySerial](https://pyserial.readthedocs.io/en/latest/)
   
-  [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html)
-  
   [Read the Docs Home](https://readthedocs.org)
   
 Reference Books and Tutorials
