@@ -1,4 +1,4 @@
-## This github repository contains references and scripts for Adafruit Microcontrollers (MCUs)
+## This github repository contains references and scripts for [Adafruit](https://www.adafruit.com) Microcontrollers (MCUs)
 
 [Bluefruit LE App for Microcontrollers, Cellphones, & Tablets](https://learn.adafruit.com/bluefruit-le-connect)
 
