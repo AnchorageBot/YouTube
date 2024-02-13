@@ -2,6 +2,14 @@
 
 Code/script repository for [how-to YouTube videos](https://www.youtube.com/channel/UCDuWq2wFqeVII1KC7grySRg) which use Microcontrollers (MCUs) and Single Board Computers (SBCs)
 
+- - - -
+Fireship Videos
+
+* [Arduino in 100 Seconds](https://youtu.be/1ENiVwk8idM?si=I_pbyOXCT1a1VcMK)
+
+* [Raspberry Pi in 100 Seconds](https://youtu.be/eZ74x6dVYes?si=AJBhoD2WFShqkor6)
+- - - -
+
 ## Microcontroller References
 
 Read the Docs
